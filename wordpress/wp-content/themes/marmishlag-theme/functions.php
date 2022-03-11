@@ -29,18 +29,17 @@ add_filter('nav_menu_link_attributes', function ($atts) {
     return $atts;
 });
 
-function wpheticPaginateLinks()
+function marmishlagPagination()
 {
     $paginateLink = paginate_links(['type' => 'array']);
+
     if ($paginateLink) {
         ob_start();
-        echo '<nav aria-label="Page navigation example" class="mt-3">';
-        echo '<ul class="pagination">';
+        echo '<nav>';
+        echo '<ul>';
 
         foreach ($paginateLink as $link) {
-            echo sprintf('<li class="page-item %s">%s</li>',
-                str_contains($link, 'current') ? 'active' : '',
-                str_replace('page-numbers', 'page-link', $link));
+            echo sprintf('<li>%s</li>', );
         }
 
         echo "</ul>";

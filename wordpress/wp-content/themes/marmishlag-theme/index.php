@@ -27,8 +27,6 @@
         <?php endwhile; ?>
     </div>
 
-    <?= wpheticPaginateLinks() ?>
-
 <?php endif; ?>
 
 <?php get_footer(); ?>
