@@ -68,6 +68,5 @@ class Recipes
         );
 
         register_post_type('recipe', $args);
-
     }
 }
