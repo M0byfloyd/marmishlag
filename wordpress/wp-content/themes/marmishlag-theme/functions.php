@@ -29,25 +29,8 @@ add_filter('nav_menu_link_attributes', function ($atts) {
     return $atts;
 });
 
-function marmishlagPagination()
-{
-    $paginateLink = paginate_links(['type' => 'array']);
-
-    if ($paginateLink) {
-        ob_start();
-        echo '<nav>';
-        echo '<ul>';
-
-        foreach ($paginateLink as $link) {
-            echo sprintf('<li>%s</li>', );
-        }
-
-        echo "</ul>";
-        echo "</nav>";
-
-        return ob_get_clean();
-    }
-}
+require_once __DIR__ . '/classes/Pagination.php';
+$pagination = new Pagination();
 
 require_once __DIR__ . '/classes/Sponsobox.php';
 $sponso = new Sponsobox('wphetic_sponso');

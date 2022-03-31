@@ -16,6 +16,6 @@
     <?php endwhile; ?>
 <?php endif; ?>
 
-<?= marmishlagPagination(); ?>
+<?php do_action('wp_marmishlag_pagination'); ?>
 
 <?php get_footer(); ?>
