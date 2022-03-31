@@ -1,21 +1,29 @@
 version: '3.1'
 
 services:
-    php:
-        build:
-            context: .
-            dockerfile: Dockerfile
+    wordpress:
+        image: wordpress
+        restart: always
+        environment:
+            WORDPRESS_DB_HOST: db
+            WORDPRESS_DB_NAME: marmishmish
+            WORDPRESS_DB_USER: marmishuse
+            WORDPRESS_DB_PASSWORD: marmishpass
         ports:
             - '2345:80'
         volumes:
             - ./wordpress:/var/www/html
+        depends_on:
+            - db
 
     db:
         image: 'mariadb'
         restart: always
         environment:
-            MYSQL_DATABASE: data
-            MYSQL_ROOT_PASSWORD: password
+            MYSQL_RANDOM_ROOT_PASSWORD: '1'
+            MYSQL_DATABASE: marmishmish
+            MYSQL_USER: marmishuse
+            MYSQL_PASSWORD: marmishpass
         volumes:
             # Pour lancer un dump automatiquement au montage du conteneur
             - ./data.sql:/docker-entrypoint-initdb.d/dump.sql
