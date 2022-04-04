@@ -1,15 +1,33 @@
-<?php get_header(); ?>
+<?php
+$categories = get_categories();
+get_header();
 
+?>
 
-<h2>Toutes nos recettes</h2>
+<?php get_search_form() ?>
+
+<label>
+    <select name="cat" form="searchForm">
+        <option value="">TYPE DE PLAT</option>
+        <?php
+        if ($categories) {
+            foreach ($categories as $category):?>
+
+            <option value="<?= $category->term_id ?>"> <?= $category->name ?> </option>
+        <?php
+            endforeach;
+        }
+
+        ?>
+    </select>
+</label>
 
 <?php
 if (have_posts()) :
-    while ( have_posts() && $count < 3 ) : the_post();
+    while ( have_posts()) : the_post();
 ?>
     <h3><?= the_title() ?></h3>
     <?php
-    $count++;
     endwhile;
 
 else :
