@@ -1,21 +1,41 @@
-<?php get_header(); ?>
+<?php
+$categories = get_categories();
+get_header();
 
-<h2>Les recettes marmishlag</h2>
+?>
 
-<?php if (have_posts()) : ?>
-    <?php while (have_posts()) : ?>
-        <?php the_post(); ?>
-        <div>
-            <img src="<?php the_post_thumbnail_url(); ?>" alt="">
-            <h3><?php the_title(); ?></h3>
-            <div><?php the_content(); ?></div>
-            <p><small><?php the_date(); ?></small></p>
-            <a href="<?php the_permalink(); ?>">Voir la recette</a>
-        </div>
+<?php get_search_form() ?>
 
-    <?php endwhile; ?>
-<?php endif; ?>
+<label>
+    <select name="cat" form="searchForm">
+        <option value="">TYPE DE PLAT</option>
+        <?php
+        if ($categories) {
+            foreach ($categories as $category):?>
 
-<?php do_action('wp_marmishlag_pagination'); ?>
+            <option value="<?= $category->term_id ?>"> <?= $category->name ?> </option>
+        <?php
+            endforeach;
+        }
+
+        ?>
+    </select>
+</label>
+
+<?php
+if (have_posts()) :
+    while ( have_posts()) : the_post();
+?>
+    <h3><?= the_title() ?></h3>
+    <?php
+    endwhile;
+
+else :
+?>
+<p>Sorry no posts matched your criteria.</p>
+<?php
+endif;
+?>
+
 
 <?php get_footer(); ?>

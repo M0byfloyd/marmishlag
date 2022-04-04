@@ -1,4 +1,5 @@
-<form class="d-flex" action="/">
-    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="s" value="<?= get_search_query() ?>">
-    <button class="btn btn-outline-success" type="submit">Search</button>
+<form action="<?php esc_url(home_url('/')) ?>" id="searchForm">
+    <input type="search" placeholder="Chercher" name="s" value="<?= get_search_query() ?>">
+
+    <button type="submit">Chercher</button>
 </form>

@@ -13,7 +13,6 @@ class Recipes
         add_action('init', [$this, 'register_post_type'], 0);
     }
 
-    // Register Custom Post Type
     public function register_post_type()
     {
         $labels = array(
@@ -50,7 +49,7 @@ class Recipes
             'label' => __('Recipe', 'text_domain'),
             'description' => __('Recipe du shlag', 'text_domain'),
             'labels' => $labels,
-            'supports' => array('title', 'editor'),
+            'supports' => array('title', 'editor', 'comments'),
             'taxonomies' => array('category'),
             'hierarchical' => false,
             'public' => true,
