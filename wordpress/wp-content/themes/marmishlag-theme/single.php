@@ -18,15 +18,10 @@ get_header();
         </div>
 
     <div>
-        <h2>Avis de la communeauté</h2>
+        <h2>Avis de la communauté</h2>
         <?php
-            if ($comments) {
-                foreach($comments as $comment) :?>
-                <p><?= $comment->comment_content ?></p>
-                    <p><?= $comment->comment_author ?></p>
-                <?php
-                endforeach;
-            }
+        comments_template();
+
         ?>
     </div>
 
