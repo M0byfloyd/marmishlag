@@ -1,3 +1,7 @@
+.navbar-container{
+    padding: 0 5%;
+    background-color: var(--color-white);
+}
 .navbar-box {
     background-color: var(--color-white);
     height: 105px;
@@ -109,10 +113,8 @@
 .search-input:focus+.search-label {
     transition: 0.4s;
     background-color: var(--color-white);
-}
-
-.search-input:focus+.search-label-text {
-    display: none;
+    /* border: 1px solid black;
+    border-right: none; */
 }
 
 .navbar-connexion {
@@ -121,7 +123,7 @@
 
 .search-input {
     position: absolute;
-    left: 49px;
+    left: 36px;
     background-color: var(--color-white);
     border: none;
     padding: 0;
@@ -132,8 +134,12 @@
 }
 
 .search-input:focus {
+    transition: width 0.4s;
     width: 185px;
     padding: 0 16px 0 0;
+    outline: none;
+    /* border: solid black 1px;
+    border-left: 0; */
 }
 
 
@@ -142,5 +148,19 @@
 @media screen and (max-width: 992px) {
     .navbar-box {
         height: 80px;
+    }
+    .navbar-collapse{
+        padding-bottom: 20px;
+        display: flex;
+    }
+    .search-box{
+        width: 50%;
+    }
+    .navbar-connexion{
+        width: 50%;
+        margin: 0;
+    }
+    .search-input{
+        width: 80%;
     }
 }
