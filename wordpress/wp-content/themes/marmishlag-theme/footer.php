@@ -1,5 +1,5 @@
 </div>
-<?php get_template_part('templates/recipe/recipe'); ?>
+<?php get_template_part('templates/recipe/recipe-style2'); ?>
 <footer id="marmishlag_footer" class="container">
     <div class="row main-part-footer" >
         <div class="col-lg-6 col-xs-12 row marmishlag-intro">

@@ -6,6 +6,8 @@ Version: 1.0.0
 */
 
 @import url('./custom-styles/footer.css');
+@import url('./custom-styles/recette.css');
+@import url('./custom-styles/thumbnail.css');
 
 @font-face {
     font-family: 'Outfit';
