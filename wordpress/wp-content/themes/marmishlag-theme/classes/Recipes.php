@@ -62,8 +62,16 @@ class Recipes
             'has_archive' => true,
             'exclude_from_search' => false,
             'publicly_queryable' => true,
-            'capability_type' => 'page',
-            "menu_icon"=>'dashicons-list-view'
+            'capability_type' => 'blog',
+            'menu_icon'=>'dashicons-list-view',
+            'capabilities'=> [
+                'publish_posts' => 'manage_recipe_admin',
+                'edit_post' => 'manage_recipe',
+                'edit_posts' => 'manage_recipe',
+                'edit_others_posts' => 'manage_recipe_admin',
+                'read_posts' => 'manage_recipe',
+                'delete_posts' => 'manage_recipe'
+            ]
         );
 
         register_post_type('recipe', $args);
