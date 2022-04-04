@@ -96,7 +96,9 @@ Version: 1.0.0
 }
 
 :root {
-    --color-black: #FCFCFC;
+    --color-white: #FCFCFC;
+
+    --color-black: #1C1C1C;
     
     --color-orange: #DE524C;
 
