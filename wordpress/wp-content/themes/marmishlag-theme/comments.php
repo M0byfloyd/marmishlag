@@ -4,10 +4,10 @@ comment_form();
 
 ?>
 
-<div id="commentaires" class="comments">
+<div>
     <?php if ( have_comments() ) : ?>
 
-        <ol class="comment__list">
+        <ol>
             <?php
             wp_list_comments( array(
                 'style'       => 'ol',
