@@ -13,7 +13,6 @@ class Recipes
         add_action('init', [$this, 'register_post_type'], 0);
     }
 
-    // Register Custom Post Type
     public function register_post_type()
     {
         $labels = array(

@@ -1,32 +1,61 @@
+<?php
+$categories = get_categories();
+$userList = get_users();
+?>
+
 <?php get_header(); ?>
 
-<?php if (have_posts()) : ?>
-    <div class="row row-cols-1 row-cols-md-3 g-4">
-        <?php while (have_posts()) : ?>
-            <?php the_post(); ?>
+<form action="<?php esc_url(home_url('/')) ?>">
+    <input type="search" placeholder="Chercher" name="s" value="<?= get_search_query() ?>">
 
-            <div class="col">
-                <div class="card">
-                    <img src="<?php the_post_thumbnail_url(); ?>" class="card-img-top" alt="...">
-                    <div class="card-body">
+    <button type="submit">Chercher</button>
+</form>
 
-                        <?php if (get_post_meta(get_the_ID(), 'wphetic_sponso', true)) : ?>
-                        <div class="alert alert-primary" role="alert">
-                            Contenu Sponsorisé
-                        </div>
-                        <?php endif; ?>
+<?php
+foreach ( $categories as $category ) {?>
+    <span><?= $category->name ?></span>
+    <?php
+}
+?>
+<h2>Recettes les plus appréciées</h2>
 
-                        <h5 class="card-title"><?php the_title(); ?></h5>
-                        <p class="card-text"><?php the_excerpt(); ?></p>
-                        <a href="<?php the_permalink(); ?>" class="btn btn-primary">Lire plus</a>
-                    </div>
-                </div>
-            </div>
+<h2>Recettes nouvellement publiées</h2>
+<a href="<?= get_post_type_archive_link('recipe') ?>">Tout voir</a>
+
+<?php
+$args = array(
+    'post_type' => 'recipe',
+    'posts_per_page' => 3,
+);
+
+$my_query = new WP_Query( $args );
+
+if( $my_query->have_posts() ) : while( $my_query->have_posts() ) : $my_query->the_post();
+
+    the_title();
+    the_content();
+    the_post_thumbnail();
+
+endwhile;
+endif;
+wp_reset_postdata();
+?>
 
 
-        <?php endwhile; ?>
-    </div>
+<h2>Les meilleurs cuisiniers</h2>
 
-<?php endif; ?>
+<?php
+    if ($userList) {
+        foreach ($userList as $user):
+            ?>
+
+            <p>
+                <?= $user->display_name ?>
+            </p>
+
+<?php
+endforeach;
+    }
+?>
 
 <?php get_footer(); ?>

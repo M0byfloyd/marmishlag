@@ -1,21 +1,23 @@
 <?php get_header(); ?>
 
-<h2>Les recettes marmishlag</h2>
 
-<?php if (have_posts()) : ?>
-    <?php while (have_posts()) : ?>
-        <?php the_post(); ?>
-        <div>
-            <img src="<?php the_post_thumbnail_url(); ?>" alt="">
-            <h3><?php the_title(); ?></h3>
-            <div><?php the_content(); ?></div>
-            <p><small><?php the_date(); ?></small></p>
-            <a href="<?php the_permalink(); ?>">Voir la recette</a>
-        </div>
+<h2>Toutes nos recettes</h2>
 
-    <?php endwhile; ?>
-<?php endif; ?>
+<?php
+if (have_posts()) :
+    while ( have_posts() && $count < 3 ) : the_post();
+?>
+    <h3><?= the_title() ?></h3>
+    <?php
+    $count++;
+    endwhile;
 
-<?php do_action('wp_marmishlag_pagination'); ?>
+else :
+?>
+<p>Sorry no posts matched your criteria.</p>
+<?php
+endif;
+?>
+
 
 <?php get_footer(); ?>
