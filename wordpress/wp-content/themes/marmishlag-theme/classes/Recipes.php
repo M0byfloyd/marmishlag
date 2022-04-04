@@ -49,7 +49,7 @@ class Recipes
             'label' => __('Recipe', 'text_domain'),
             'description' => __('Recipe du shlag', 'text_domain'),
             'labels' => $labels,
-            'supports' => array('title', 'editor'),
+            'supports' => array('title', 'editor', 'comments'),
             'taxonomies' => array('category'),
             'hierarchical' => false,
             'public' => true,
@@ -62,8 +62,15 @@ class Recipes
             'has_archive' => true,
             'exclude_from_search' => false,
             'publicly_queryable' => true,
-            'capability_type' => 'page',
-            "menu_icon"=>'dashicons-list-view'
+            'capability_type' => 'blog',
+            'menu_icon'=>'dashicons-list-view',
+            'capabilities'=> [
+                'publish_posts' => 'publish_recipes',
+                'edit_post' => 'edit_recipe',
+                'edit_posts' => 'edit_recipes',
+                'read_posts' => 'read_recipes',
+                'delete_posts' => 'delete_recipes'
+            ]
         );
 
         register_post_type('recipe', $args);
