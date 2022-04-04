@@ -5,10 +5,10 @@ Description: Super themes pour la cuisine de madame
 Version: 1.0.0
 */
 
+@import url(custom-styles/header.css);
 @font-face {
     font-family: 'Outfit';
-    src: url('./fonts/Outfit/Outfit-ExtraLight.woff2') format('woff2'),
-        url('./fonts/Outfit/Outfit-ExtraLight.woff') format('woff');
+    src: url('./fonts/Outfit/Outfit-ExtraLight.woff2') format('woff2'), url('./fonts/Outfit/Outfit-ExtraLight.woff') format('woff');
     font-weight: 200;
     font-style: normal;
     font-display: swap;
@@ -16,8 +16,7 @@ Version: 1.0.0
 
 @font-face {
     font-family: 'Outfit';
-    src: url('./fonts/Outfit/Outfit-Thin.woff2') format('woff2'),
-        url('./fonts/Outfit/Outfit-Thin.woff') format('woff');
+    src: url('./fonts/Outfit/Outfit-Thin.woff2') format('woff2'), url('./fonts/Outfit/Outfit-Thin.woff') format('woff');
     font-weight: 100;
     font-style: normal;
     font-display: swap;
@@ -25,8 +24,7 @@ Version: 1.0.0
 
 @font-face {
     font-family: 'Outfit';
-    src: url('./fonts/Outfit/Outfit-ExtraBold.woff2') format('woff2'),
-        url('./fonts/Outfit/Outfit-ExtraBold.woff') format('woff');
+    src: url('./fonts/Outfit/Outfit-ExtraBold.woff2') format('woff2'), url('./fonts/Outfit/Outfit-ExtraBold.woff') format('woff');
     font-weight: bold;
     font-style: normal;
     font-display: swap;
@@ -34,8 +32,7 @@ Version: 1.0.0
 
 @font-face {
     font-family: 'Outfit';
-    src: url('./fonts/Outfit/Outfit-Medium.woff2') format('woff2'),
-        url('./fonts/Outfit/Outfit-Medium.woff') format('woff');
+    src: url('./fonts/Outfit/Outfit-Medium.woff2') format('woff2'), url('./fonts/Outfit/Outfit-Medium.woff') format('woff');
     font-weight: 500;
     font-style: normal;
     font-display: swap;
@@ -43,8 +40,7 @@ Version: 1.0.0
 
 @font-face {
     font-family: 'Outfit';
-    src: url('./fonts/Outfit/Outfit-Bold.woff2') format('woff2'),
-        url('./fonts/Outfit/Outfit-Bold.woff') format('woff');
+    src: url('./fonts/Outfit/Outfit-Bold.woff2') format('woff2'), url('./fonts/Outfit/Outfit-Bold.woff') format('woff');
     font-weight: bold;
     font-style: normal;
     font-display: swap;
@@ -52,8 +48,7 @@ Version: 1.0.0
 
 @font-face {
     font-family: 'Outfit';
-    src: url('./fonts/Outfit/Outfit-Light.woff2') format('woff2'),
-        url('./fonts/Outfit/Outfit-Light.woff') format('woff');
+    src: url('./fonts/Outfit/Outfit-Light.woff2') format('woff2'), url('./fonts/Outfit/Outfit-Light.woff') format('woff');
     font-weight: 300;
     font-style: normal;
     font-display: swap;
@@ -61,8 +56,7 @@ Version: 1.0.0
 
 @font-face {
     font-family: 'Outfit';
-    src: url('./fonts/Outfit/Outfit-Black.woff2') format('woff2'),
-        url('./fonts/Outfit/Outfit-Black.woff') format('woff');
+    src: url('./fonts/Outfit/Outfit-Black.woff2') format('woff2'), url('./fonts/Outfit/Outfit-Black.woff') format('woff');
     font-weight: 900;
     font-style: normal;
     font-display: swap;
@@ -70,8 +64,7 @@ Version: 1.0.0
 
 @font-face {
     font-family: 'Outfit';
-    src: url('./fonts/Outfit/Outfit-Regular.woff2') format('woff2'),
-        url('./fonts/Outfit/Outfit-Regular.woff') format('woff');
+    src: url('./fonts/Outfit/Outfit-Regular.woff2') format('woff2'), url('./fonts/Outfit/Outfit-Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -79,8 +72,7 @@ Version: 1.0.0
 
 @font-face {
     font-family: 'Outfit';
-    src: url('./fonts/Outfit/Outfit-SemiBold.woff2') format('woff2'),
-        url('./fonts/Outfit/Outfit-SemiBold.woff') format('woff');
+    src: url('./fonts/Outfit/Outfit-SemiBold.woff2') format('woff2'), url('./fonts/Outfit/Outfit-SemiBold.woff') format('woff');
     font-weight: 600;
     font-style: normal;
     font-display: swap;
@@ -88,8 +80,7 @@ Version: 1.0.0
 
 @font-face {
     font-family: 'Staatliches';
-    src: url('./fonts/Staatliches/Staatliches-Regular.woff2') format('woff2'),
-        url('./fonts/Staatliches/Staatliches-Regular.woff') format('woff');
+    src: url('./fonts/Staatliches/Staatliches-Regular.woff2') format('woff2'), url('./fonts/Staatliches/Staatliches-Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -97,11 +88,8 @@ Version: 1.0.0
 
 :root {
     --color-white: #FCFCFC;
-
     --color-black: #1C1C1C;
-    
     --color-orange: #DE524C;
-
     --color-gray-50: #F9FAFB;
     --color-gray-100: #F3F4F6;
     --color-gray-200: #E5E7EB;
