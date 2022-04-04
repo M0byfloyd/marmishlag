@@ -5,6 +5,8 @@ Description: Super themes pour la cuisine de madame
 Version: 1.0.0
 */
 
+@import url('./custom-styles/footer.css');
+
 @font-face {
     font-family: 'Outfit';
     src: url('./fonts/Outfit/Outfit-ExtraLight.woff2') format('woff2'),
@@ -95,12 +97,66 @@ Version: 1.0.0
     font-display: swap;
 }
 
+@font-face {
+    font-family: 'DM Sans';
+    src: url('DMSans-Bold.woff2') format('woff2'),
+        url('DMSans-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'DM Sans';
+    src: url('DMSans-Regular.woff2') format('woff2'),
+        url('DMSans-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'DM Sans';
+    src: url('DMSans-Medium.woff2') format('woff2'),
+        url('DMSans-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'DM Sans';
+    src: url('DMSans-Italic.woff2') format('woff2'),
+        url('DMSans-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'DM Sans';
+    src: url('DMSans-BoldItalic.woff2') format('woff2'),
+        url('DMSans-BoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'DM Sans';
+    src: url('DMSans-MediumItalic.woff2') format('woff2'),
+        url('DMSans-MediumItalic.woff') format('woff');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
 :root {
     --color-white: #FCFCFC;
 
     --color-black: #1C1C1C;
     
-    --color-orange: #DE524C;
+    --color-main: #E17C78;
 
     --color-gray-50: #F9FAFB;
     --color-gray-100: #F3F4F6;
@@ -112,4 +168,8 @@ Version: 1.0.0
     --color-gray-700: #394250;
     --color-gray-800: #212936;
     --color-gray-900: #121826;
+}
+
+body {
+    font-family: 'Outfit';
 }
