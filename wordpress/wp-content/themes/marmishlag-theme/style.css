@@ -5,7 +5,19 @@ Description: Super themes pour la cuisine de madame
 Version: 1.0.0
 */
 
+@import url(custom-styles/header.css);
+@import url(custom-styles/footer.css);
 :root {
     --color-black: #FCFCFC;
-    --color-gray: #6C737F;
+    --color-orange: #DE524C;
+    --color-gray-50: #F9FAFB;
+    --color-gray-100: #F3F4F6;
+    --color-gray-200: #E5E7EB;
+    --color-gray-300: #D2D5DA;
+    --color-gray-400: #9DA3AE;
+    --color-gray-500: #6C737F;
+    --color-gray-600: #4D5662;
+    --color-gray-700: #6C737F;
+    --color-gray-800: #6C737F;
+    --color-gray-900: #6C737F;
 }
