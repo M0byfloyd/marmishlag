@@ -8,7 +8,7 @@ Version: 1.0.0
 @import url('./custom-styles/footer.css');
 @import url('./custom-styles/recette.css');
 @import url('./custom-styles/thumbnail.css');
-@import url('./custom-styles/single.css');
+@import url('./custom-styles/page/index.css');
 @import url('./custom-styles/components/index.css');
 @import url('./custom-styles/header.css');
 @import url('./custom-styles/search.css');
