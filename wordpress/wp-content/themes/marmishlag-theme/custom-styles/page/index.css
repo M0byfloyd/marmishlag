@@ -1,0 +1,11 @@
+.single__header {
+  min-height: 490px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.single__title {
+  color: white;
+}
+
+/*# sourceMappingURL=index.css.map */

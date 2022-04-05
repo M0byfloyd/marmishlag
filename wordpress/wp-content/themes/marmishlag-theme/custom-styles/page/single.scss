@@ -1,0 +1,12 @@
+.single {
+  &__header {
+    min-height: 490px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &__title {
+    color: white;
+  }
+}

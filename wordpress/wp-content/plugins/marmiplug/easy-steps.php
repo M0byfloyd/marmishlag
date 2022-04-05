@@ -3,6 +3,13 @@
     Plugin Name: Marmi-Plug
 */
 
+add_action('wp_enqueue_scripts', function () {
+    wp_enqueue_style('marmiplug-css', '/wp-content/plugins/marmiplug/assets/style/index.css');
+});
+
 require_once __DIR__ . '/PreparationHelp.php';
 $recipes = new PreparationHelp();
+
+require_once __DIR__ . '/Difficulty.php';
+$difficulty = new Difficulty();
 
