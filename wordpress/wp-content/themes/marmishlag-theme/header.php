@@ -6,6 +6,7 @@
     <meta name="viewport"
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Marmishlag</title>
     <?php wp_head(); ?>
 </head>
 
@@ -13,7 +14,7 @@
 
     <nav class="navbar navbar-expand-lg navbar-box">
         <div class="container-fluid justify-content-between navbar-container">
-            <a class="navbar-brand navbar-title" href="#">MIJOTON</a>
+            <a class="navbar-brand navbar-title" href="/">MIJOTON</a>
             <button class="navbar-toggler navbar-burger" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -37,4 +38,8 @@
     </nav>
 
 
+<<<<<<< HEAD
     <div class="container">
+=======
+<div class="container-fluid p-5">
+>>>>>>> 5ce87cedaf66410b497c8cef70b4d4822b15df51
