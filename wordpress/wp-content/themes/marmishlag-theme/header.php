@@ -14,7 +14,7 @@
 
     <nav class="navbar navbar-expand-lg navbar-box">
         <div class="container-fluid justify-content-between navbar-container">
-            <a class="navbar-brand navbar-title" href="/">MIJOTON</a>
+            <a class="navbar-brand navbar-title" href="<?php echo home_url(); ?>">MIJOTON</a>
             <button class="navbar-toggler navbar-burger" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">

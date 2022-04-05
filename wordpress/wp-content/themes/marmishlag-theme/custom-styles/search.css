@@ -1,7 +1,15 @@
 .box{
     padding: 110px 0;
+}
+.box-homepage{
     background: url('.././images/unsplash_KPDbRyFOTnE.png') no-repeat;
     background-size: cover;
+
+}
+.box-recette{
+    background: url('.././images/unsplash_0geTqSZ76Xg.png') no-repeat;
+    background-size: cover;
+
 }
 .box-title{
     font-family: Outfit;
@@ -70,7 +78,11 @@
         font-size: 16px;
         line-height: 20PX;
     }
+    .input-text {
+        width: 70%;
+    }
     .input-btn{
         font-size: 14px;
+        width: 30% !important;
     }
 }

@@ -27,7 +27,7 @@
 }
 
 .navbar-connexion {
-    background-color: var(--color-black);
+    background-color: var(--color-gray-900);
     color: var(--color-white);
     text-decoration: none;
     height: 42px;
@@ -35,7 +35,7 @@
     padding: 12px 18px;
     display: flex;
     align-items: center;
-    border: solid 2px var(--color-black);
+    border: solid 2px var(--color-gray-900);
     transition: 0.4s;
     font-size: 14px;
     font-family: Outfit;
@@ -48,7 +48,7 @@
 
 .navbar-connexion:hover {
     background-color: var(--color-white);
-    color: var(--color-black);
+    color: var(--color-gray-900);
 }
 
 .navbar-connexion-user {
