@@ -8,6 +8,10 @@ Version: 1.0.0
 @import url('./custom-styles/footer.css');
 @import url('./custom-styles/recette.css');
 @import url('./custom-styles/thumbnail.css');
+@import url('./custom-styles/category.css');
+@import url('./custom-styles/cuisinier.css');
+@import url('./custom-styles/homepage.css');
+@import url('./custom-styles/newsletter.css');
 
 @font-face {
     font-family: 'Outfit';

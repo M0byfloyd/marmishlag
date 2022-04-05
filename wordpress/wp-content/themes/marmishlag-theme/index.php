@@ -11,16 +11,52 @@ $userList = get_users();
     <button type="submit">Chercher</button>
 </form>
 
-<?php
-foreach ( $categories as $category ) {?>
-    <span><?= $category->name ?></span>
+<div id="categories" class="categories-list">
     <?php
-}
-?>
-<h2>Recettes les plus appréciées</h2>
+    foreach ( $categories as $category ) {
+        get_template_part('templates/recipe/category', null, array('category'=>$category));
+        get_template_part('templates/recipe/category', null, array('category'=>$category));
+    }
+    ?>
+</div>
 
-<h2>Recettes nouvellement publiées</h2>
-<a href="<?= get_post_type_archive_link('recipe') ?>">Tout voir</a>
+<div id="best_recipes">
+    <div class="section-title">
+        <h2>Recettes les plus appréciées</h2> 
+        <a href="<?= get_post_type_archive_link('recipe') ?>">
+            <span>Tout voir</span>
+            <span>
+                <svg width="18" height="13" viewBox="0 0 18 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10.422 0L9.40537 0.870625L14.7944 5.625H0.46875V6.875H14.7944L9.40537 11.6081L10.422 12.5L17.5315 6.25L10.422 0Z" fill="#6C737F"/>
+                </svg>
+            </span>
+        </a>
+    </div>
+
+    <div class="thumbnails-list">
+        <?php get_template_part('templates/recipe/thumbnail'); ?>
+        <?php get_template_part('templates/recipe/thumbnail'); ?>
+    </div>
+</div>
+
+<div id="new_recipes">
+    <div class="section-title">
+        <h2>Recettes nouvellement publiées</h2> 
+        <a href="<?= get_post_type_archive_link('recipe') ?>">
+            <span>Tout voir</span>
+            <span>
+                <svg width="18" height="13" viewBox="0 0 18 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10.422 0L9.40537 0.870625L14.7944 5.625H0.46875V6.875H14.7944L9.40537 11.6081L10.422 12.5L17.5315 6.25L10.422 0Z" fill="#6C737F"/>
+                </svg>
+            </span>
+        </a>
+    </div>
+
+    <div class="thumbnails-list">
+        <?php get_template_part('templates/recipe/thumbnail'); ?>
+        <?php get_template_part('templates/recipe/thumbnail'); ?>
+    </div>
+</div>
 
 <?php
 $args = array(
@@ -41,21 +77,27 @@ endif;
 wp_reset_postdata();
 ?>
 
+<div id="newsletter">
+    <?php 
+    get_template_part('templates/recipe/newsletter', null, array('category'=>$category));
+    ?>
+</div>
+<div id="best_cuisto">
+    <div class="section-title">
+        <h2>Les meilleurs cuisiniers</h2>
+    </div>
+    <div class="cuisiniers-list">
+        <?php
+        if ($userList) {
+            foreach ($userList as $user):
+                get_template_part('templates/recipe/cuisinier', null, array('cuisinier'=>$user->display_name));
+                get_template_part('templates/recipe/cuisinier', null, array('cuisinier'=>$user->display_name));
+            endforeach;
+        }
+        ?>
+    </div>
+</div>
 
-<h2>Les meilleurs cuisiniers</h2>
 
-<?php
-    if ($userList) {
-        foreach ($userList as $user):
-            ?>
-
-            <p>
-                <?= $user->display_name ?>
-            </p>
-
-<?php
-endforeach;
-    }
-?>
 
 <?php get_footer(); ?>

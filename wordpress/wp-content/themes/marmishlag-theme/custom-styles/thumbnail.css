@@ -37,8 +37,40 @@
     display: flex;
     justify-content: space-between;
     margin-bottom: 15px;
+    font-weight: 400;
 }
 
 .thumbnail .thumbnail-note svg {
     padding: 0;
+}
+
+
+@media screen and (max-width: 992px) {
+    .thumbnail {
+        width: 150px;
+        height: 190px;
+        border-radius: 3px;
+        box-shadow: inset 0px -50px 50px -15px rgba(0,0,0,0.8);
+    }
+    
+    .thumbnail .card-body {
+        padding-bottom: 5px;
+        padding-left: 10px;
+    }
+    
+    .thumbnail .card-text {
+        font-size: 6px;
+        margin-bottom: 5px;
+    }
+    
+    .thumbnail .card-title {
+        font-size: 13px;
+        margin-bottom: 0px;
+    }
+    
+    .thumbnail .thumbnail-note svg {
+        padding: 0;
+        width: 11px;
+        height: 10px
+    }    
 }
