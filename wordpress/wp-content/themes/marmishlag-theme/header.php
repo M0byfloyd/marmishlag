@@ -31,4 +31,4 @@
 </nav>
 
 
-<div class="container p-5">
+<div class="container-fluid p-5">

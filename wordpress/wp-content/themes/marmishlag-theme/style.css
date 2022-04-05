@@ -8,6 +8,8 @@ Version: 1.0.0
 @import url('./custom-styles/footer.css');
 @import url('./custom-styles/recette.css');
 @import url('./custom-styles/thumbnail.css');
+@import url('./custom-styles/single.css');
+@import url('./custom-styles/components/index.css');
 
 @font-face {
     font-family: 'Outfit';
@@ -157,7 +159,7 @@ Version: 1.0.0
     --color-white: #FCFCFC;
 
     --color-black: #1C1C1C;
-    
+
     --color-main: #E17C78;
 
     --color-gray-50: #F9FAFB;
