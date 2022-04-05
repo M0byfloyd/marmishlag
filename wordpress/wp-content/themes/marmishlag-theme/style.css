@@ -12,6 +12,7 @@ Version: 1.0.0
 @import url('./custom-styles/cuisinier.css');
 @import url('./custom-styles/homepage.css');
 @import url('./custom-styles/newsletter.css');
+@import url('./custom-styles/archive.css');
 
 @font-face {
     font-family: 'Outfit';
