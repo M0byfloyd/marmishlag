@@ -35,6 +35,7 @@ class Recipes
         ?>
         <div class="row">
             <?php
+            var_dump(get_post_meta(get_the_ID(), 'marmishlag_recipe_ingredients')[0]);
 
             for ($i = 0; $i <= $this->maxIngredients; $i++):
                 $quantity = isset(get_post_meta(get_the_ID(), 'marmishlag_recipe_ingredients')[0][$i]['quantity']) && !empty(get_post_meta(get_the_ID(), 'marmishlag_recipe_ingredients')[0][$i]['quantity']) ? get_post_meta(get_the_ID(), 'marmishlag_recipe_ingredients')[0][$i]['quantity'] : '';
