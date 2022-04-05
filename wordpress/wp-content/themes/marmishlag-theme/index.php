@@ -34,7 +34,6 @@ if (isset($_GET['s']) && !empty($_GET['s'])) {
         <?php
         foreach ($categories as $category) {
             get_template_part('templates/recipe/category', null, array('category' => $category));
-            get_template_part('templates/recipe/category', null, array('category' => $category));
         }
         ?>
     </div>
@@ -87,7 +86,6 @@ if (isset($_GET['s']) && !empty($_GET['s'])) {
             <?php
             if ($userList) {
                 foreach ($userList as $user):
-                    get_template_part('templates/recipe/cuisinier', null, array('cuisinier' => $user->display_name));
                     get_template_part('templates/recipe/cuisinier', null, array('cuisinier' => $user->display_name));
                 endforeach;
             }

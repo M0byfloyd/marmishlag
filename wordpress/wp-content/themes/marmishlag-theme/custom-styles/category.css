@@ -16,6 +16,8 @@
     align-items: flex-end;
     padding-bottom: 15px;
     padding-left: 15px;
+    color: white;
+    text-decoration: white;
 }
 
 .category .card-title {
@@ -26,7 +28,7 @@
     margin-bottom: 0;
     font-weight: 400;
 }
-    
+
 .category .card-body svg {
     margin-bottom: 4px;
 }
@@ -36,16 +38,16 @@
         width: 90px;
         height: 90px;
     }
-    
+
     .category .card-body {
         padding-bottom: 5px;
         padding-left: 5px;
     }
-    
+
     .category .card-title {
         font-size: 10px;
     }
-    
+
     .category .card-body svg {
         margin-bottom: -3px;
     }
