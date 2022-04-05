@@ -11,6 +11,8 @@ add_action('after_setup_theme',
 
 add_action('wp_enqueue_scripts', function () {
     wp_enqueue_style('marmishlag-theme-bootstrap-css', 'https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css');
+    wp_enqueue_style('style', get_template_directory_uri() . '/style.css');
+    wp_enqueue_script('script', get_template_directory_uri() . '/custom-scripts/script.js');
     wp_enqueue_script('marmishlag-theme-bootstrap-js', 'https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js', [], false, true);
 });
 

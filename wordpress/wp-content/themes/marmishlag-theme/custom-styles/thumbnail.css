@@ -1,0 +1,44 @@
+.thumbnail {
+    background-image: url("https://images.unsplash.com/photo-1627286400579-027de47e9e73");
+    width: 300px;
+    height: 380px;
+    background-position: center;
+    color: var(--color-white);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 6px;
+    box-shadow: inset 0px -50px 50px -30px rgba(0,0,0,0.8);
+}
+
+.thumbnail .card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-bottom: 30px;
+    padding-left: 20px;
+}
+
+.thumbnail .filled-star path {
+    fill: #E17C78;
+}
+
+.thumbnail .empty-star path {
+    fill: var(--color-gray-300);
+}
+
+.thumbnail .card-text {
+    font-size: 10px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.thumbnail .card-title {
+    font-size: 26px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.thumbnail .thumbnail-note svg {
+    padding: 0;
+}
