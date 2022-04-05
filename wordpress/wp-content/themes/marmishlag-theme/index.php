@@ -5,7 +5,7 @@ $userList = get_users();
 
 <?php get_header(); ?>
 </div>
-<div class="box">
+<div class="box box-homepage">
     <div class="container">
         <div class="box-content">
             <h1 class="box-title">Scelerisque praesent fringilla</h1>

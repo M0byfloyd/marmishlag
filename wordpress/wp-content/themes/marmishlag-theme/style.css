@@ -161,7 +161,7 @@ Version: 1.0.0
     --color-gray-900: #121826;
 }
 .full{
-    width: 100%;
+    width: 100% !important;
 }
 .flex{
     display: flex;
