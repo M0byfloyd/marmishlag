@@ -11,9 +11,12 @@ get_header();
         <h1 class="single__title"><?= the_title() ?></h1>
     </div>
     <div class="row">
-        <p><?= $duration ?> min.</p>
-
-        <?php do_action('marmiplug-difficulty'); ?>
+        <div class="col">
+            <span><?= $duration ?> min.</span>
+        </div>
+        <div class="col">
+            <?php do_action('marmiplug-difficulty'); ?>
+        </div>
     </div>
 
     <div class="row">

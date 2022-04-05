@@ -43,16 +43,16 @@ class Difficulty
     public function display()
     {
         $levelDifficulty = get_post_meta(get_the_ID(), 'marmishlag_recipe_difficulty')[0];
-        ob_start()
-        ?>
-        <div class="marmiplug-difficulty">
-            <?php for ($i = 1; $i <= 3; $i++) { ?>
-                <img class="marmiplug-difficulty__img"
-                     src="<?=  $i <= $levelDifficulty ? '/wp-content/plugins/marmiplug/assets/img/svg/difficulty_active.svg':'/wp-content/plugins/marmiplug/assets/img/svg/difficulty.svg'  ?>" alt="">
-            <?php } ?>
-        </div>
-        <?php
-
-        echo ob_get_clean();
+        if (isset($levelDifficulty) && !empty($levelDifficulty)) {
+            ob_start()
+            ?>
+            <div class="marmiplug-difficulty">
+                <?php for ($i = 1; $i <= 3; $i++) { ?>
+                    <img class="marmiplug-difficulty__img"
+                         src="<?= $i <= $levelDifficulty ? '/wp-content/plugins/marmiplug/assets/img/svg/difficulty_active.svg' : '/wp-content/plugins/marmiplug/assets/img/svg/difficulty.svg' ?>"
+                         alt="">
+                <?php } ?>
+            </div>
+            <?php echo ob_get_clean();}
     }
 }
