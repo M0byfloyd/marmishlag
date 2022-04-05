@@ -16,6 +16,8 @@
     justify-content: flex-end;
     padding-bottom: 30px;
     padding-left: 20px;
+    color: white;
+    text-decoration: none;
 }
 
 .thumbnail .filled-star path {
@@ -52,25 +54,25 @@
         border-radius: 3px;
         box-shadow: inset 0px -50px 50px -15px rgba(0,0,0,0.8);
     }
-    
+
     .thumbnail .card-body {
         padding-bottom: 5px;
         padding-left: 10px;
     }
-    
+
     .thumbnail .card-text {
         font-size: 6px;
         margin-bottom: 5px;
     }
-    
+
     .thumbnail .card-title {
         font-size: 13px;
         margin-bottom: 0px;
     }
-    
+
     .thumbnail .thumbnail-note svg {
         padding: 0;
         width: 11px;
         height: 10px
-    }    
+    }
 }

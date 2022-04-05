@@ -7,7 +7,7 @@ get_header();
 <?php the_post(); ?>
 <div class="single">
     <div class="row single__header"
-         style="background-image: url('https://media-exp1.licdn.com/dms/image/C4E03AQFq2tDHxJ8a0Q/profile-displayphoto-shrink_200_200/0/1624362788705?e=1654732800&v=beta&t=wChYVYaD9cIfXFzTN5ytXkLKUgxlVNQnsz-SrjQwA7w')">
+         style="background-image: url('<?= get_the_post_thumbnail_url() ?>')">
         <h1 class="single__title"><?= the_title() ?></h1>
     </div>
     <div class="row">

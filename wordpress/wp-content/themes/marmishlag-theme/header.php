@@ -11,7 +11,6 @@
 </head>
 
 <body>
-
     <nav class="navbar navbar-expand-lg navbar-box">
         <div class="container-fluid justify-content-between navbar-container">
             <a class="navbar-brand navbar-title" href="<?php echo home_url(); ?>">MIJOTON</a>
@@ -37,5 +36,4 @@
         </div>
     </nav>
 
-
-    <div class="container">
+    <div class="container-fluid">

@@ -42,7 +42,7 @@ class Difficulty
 
     public function display()
     {
-        $levelDifficulty = get_post_meta(get_the_ID(), 'marmishlag_recipe_difficulty')[0];
+        $levelDifficulty = isset(get_post_meta(get_the_ID(), 'marmishlag_recipe_difficulty')[0]) && !empty(get_post_meta(get_the_ID(), 'marmishlag_recipe_difficulty')) ? get_post_meta(get_the_ID() , 'marmishlag_recipe_difficulty')[0]: null;
         if (isset($levelDifficulty) && !empty($levelDifficulty)) {
             ob_start()
             ?>
