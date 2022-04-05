@@ -1,6 +1,10 @@
 <?php
 $categories = get_categories();
 $userList = get_users();
+
+if (isset($_GET['s']) && !empty($_GET['s'])) {
+    wp_redirect('/recipe?s=' . $_GET['s']);
+}
 ?>
 
 <?php get_header(); ?>
