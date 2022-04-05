@@ -10,7 +10,9 @@ if (isset($_GET['s']) && !empty($_GET['s'])) {
 <?php get_header(); ?>
 
 <form action="<?php esc_url(home_url('/')) ?>">
-    <input type="search" placeholder="Chercher" name="s" value="<?= get_search_query() ?>">
+    <label>
+        <input type="search" placeholder="Chercher" name="s" value="<?= get_search_query() ?>">
+    </label>
 
     <button type="submit">Chercher</button>
 </form>
