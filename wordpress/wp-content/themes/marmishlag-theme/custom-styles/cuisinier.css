@@ -1,0 +1,30 @@
+.cuisinier {
+    width: 180px;
+}
+
+.cuisinier img {
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.cuisinier p {
+    text-align: center;
+    margin: 20px 0 0 0;
+    font-size: 18px;
+}
+
+@media screen and (max-width: 992px) {
+    .cuisinier {
+        width: 90px;
+    }
+    
+    .cuisinier img {
+        height: 90px;
+    }
+    
+    .cuisinier p {
+        margin: 10px 0 0 0;
+        font-size: 10px;
+    }
+}
