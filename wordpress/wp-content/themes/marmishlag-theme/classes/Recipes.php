@@ -3,6 +3,7 @@
 
 class Recipes
 {
+
     public function __construct()
     {
         $this->register();
@@ -49,7 +50,7 @@ class Recipes
             'label' => __('Recipe', 'text_domain'),
             'description' => __('Recipe du shlag', 'text_domain'),
             'labels' => $labels,
-            'supports' => array('title', 'editor', 'comments'),
+            'supports' => array('title', 'editor', 'comments','thumbnail'),
             'taxonomies' => array('category'),
             'hierarchical' => false,
             'public' => true,
@@ -63,8 +64,8 @@ class Recipes
             'exclude_from_search' => false,
             'publicly_queryable' => true,
             'capability_type' => 'blog',
-            'menu_icon'=>'dashicons-list-view',
-            'capabilities'=> [
+            'menu_icon' => 'dashicons-list-view',
+            'capabilities' => [
                 'publish_posts' => 'manage_recipe_admin',
                 'edit_post' => 'manage_recipe',
                 'edit_posts' => 'manage_recipe',
