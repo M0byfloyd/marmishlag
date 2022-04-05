@@ -38,8 +38,4 @@
     </nav>
 
 
-<<<<<<< HEAD
     <div class="container">
-=======
-<div class="container-fluid p-5">
->>>>>>> 5ce87cedaf66410b497c8cef70b4d4822b15df51
