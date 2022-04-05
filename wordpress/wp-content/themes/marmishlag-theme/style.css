@@ -9,6 +9,7 @@ Version: 1.0.0
 @import url('./custom-styles/recette.css');
 @import url('./custom-styles/thumbnail.css');
 @import url('./custom-styles/header.css');
+@import url('./custom-styles/search.css');
 @font-face {
     font-family: 'Outfit';
     src: url('./fonts/Outfit/Outfit-ExtraLight.woff2') format('woff2'), url('./fonts/Outfit/Outfit-ExtraLight.woff') format('woff');
@@ -158,6 +159,12 @@ Version: 1.0.0
     --color-gray-700: #394250;
     --color-gray-800: #212936;
     --color-gray-900: #121826;
+}
+.full{
+    width: 100%;
+}
+.flex{
+    display: flex;
 }
 
 body {

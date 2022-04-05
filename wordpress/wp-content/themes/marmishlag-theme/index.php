@@ -4,12 +4,24 @@ $userList = get_users();
 ?>
 
 <?php get_header(); ?>
+</div>
+<div class="box">
+    <div class="container">
+        <div class="box-content">
+            <h1 class="box-title">Scelerisque praesent fringilla</h1>
+            <p class="box-text">Tempus nisl purus tempor nunc ultricies mauris porta dolor. Risus arcu sapien amet mi dolor, sodales iaculis varius viverra. Posuere eget pulvinar pretium vitae, aliquet faucibus at.</p>
+        </div>
+        <form action="<?php esc_url(home_url('/')) ?>">
+            <div class="full flex">
+                <input type="search" placeholder="Chercher un aliment, un plat, etc" class="input-text" name="s" value="<?= get_search_query() ?>">
+                <button type="submit" class="input-btn">Rechercher</button>
+            </div>
+        </form>
+    </div>
+</div>
+<div class="container">
 
-<form action="<?php esc_url(home_url('/')) ?>">
-    <input type="search" placeholder="Chercher" name="s" value="<?= get_search_query() ?>">
 
-    <button type="submit">Chercher</button>
-</form>
 
 <?php
 foreach ( $categories as $category ) {?>
