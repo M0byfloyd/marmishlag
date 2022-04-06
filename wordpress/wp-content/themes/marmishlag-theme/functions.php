@@ -75,5 +75,7 @@ require_once __DIR__ . '/classes/Recipes.php';
 $recipes = new Recipes();
 
 require_once __DIR__ . '/classes/Roles.php';
-$recipes = new Roles();
+$roles = new Roles();
 
+require_once __DIR__ . '/classes/Auth.php';
+new Auth($_POST);
