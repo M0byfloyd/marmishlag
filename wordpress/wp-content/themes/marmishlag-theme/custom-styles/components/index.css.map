@@ -1,1 +1,10 @@
-{"version":3,"sourceRoot":"","sources":["list.scss"],"names":[],"mappings":"AACE;EACE;;AAGF;EACE;EACA","file":"index.css"}
+{
+    "version": 3,
+    "mappings": "ACCK,AAAD,uBAAQ,CAAC;EACL,SAAS,EAAE,IAAI;CAClB;;AACA,AAAD,sBAAO,CAAC;EACJ,UAAU,EAAE,OAAO;CACtB",
+    "sources": [
+        "index.scss",
+        "list.scss"
+    ],
+    "names": [],
+    "file": "index.css"
+}

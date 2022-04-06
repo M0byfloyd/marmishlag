@@ -78,13 +78,13 @@ class Ingredients
         ?>
         <div class="row marmishlag-list">
 
-        <h2 class="marmishlag-list__title">Ingrédients</h2>
+        <h2 class="single__title">Ingrédients</h2>
 
         <?php
         $ingredients = isset(get_post_meta(get_the_ID(), 'marmishlag_recipe_ingredients')[0]) && !empty(get_post_meta(get_the_ID(), 'marmishlag_recipe_ingredients')) ? get_post_meta(get_the_ID(), 'marmishlag_recipe_ingredients')[0] : null;
         if (isset($ingredients) && !empty($ingredients)) {
             ?>
-            <div class="marmishlag-list__list">
+            <div class="single__list">
                 <?php
                 foreach (get_post_meta(get_the_ID(), 'marmishlag_recipe_ingredients')[0] as $ingredient):
                     ?>

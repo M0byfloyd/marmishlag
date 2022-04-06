@@ -3,6 +3,7 @@ $categories = get_categories();
 get_header();
 
 ?>
+</div>
 <div class="box box-recette">
     <div class="container">
         <div class="box-content full">
@@ -16,7 +17,7 @@ get_header();
         </form>
     </div>
 </div>
-<div class="container">
+<div class="container-fluid">
 <?php /* get_search_form() */ ?>
 
 <label>
