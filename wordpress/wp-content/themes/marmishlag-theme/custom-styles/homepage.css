@@ -25,6 +25,14 @@
     gap: 30px;
 }
 
+.marmishlag-drag-slider {
+    transform: translateX(0px)
+}
+
+.marmishlag-drag-slider > div {
+    width: max-content;
+}
+
 .section-title {
     display: flex;
     justify-content: space-between;

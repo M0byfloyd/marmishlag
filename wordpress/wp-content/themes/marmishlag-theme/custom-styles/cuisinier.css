@@ -1,5 +1,8 @@
 .cuisinier {
-    width: 180px;
+    min-width: 180px;
+    max-width: 180px;
+    pointer-events: none;
+    user-select: none;
 }
 
 .cuisinier img {
@@ -16,7 +19,8 @@
 
 @media screen and (max-width: 992px) {
     .cuisinier {
-        width: 90px;
+        min-width: 90px;
+        max-width: 90px;
     }
     
     .cuisinier img {

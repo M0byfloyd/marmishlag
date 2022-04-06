@@ -30,8 +30,7 @@ if (isset($_GET['s']) && !empty($_GET['s'])) {
 <div id="categories" class="categories-list">
     <?php
     foreach ( $categories as $category ) {
-        get_template_part('templates/recipe/category', null, array('category'=>$category));
-        get_template_part('templates/recipe/category', null, array('category'=>$category));
+        get_template_part('templates/category/category', null, array('category'=>$category));
     }
     ?>
 </div>
@@ -51,7 +50,6 @@ if (isset($_GET['s']) && !empty($_GET['s'])) {
 
     <div class="thumbnails-list">
         <?php get_template_part('templates/recipe/thumbnail'); ?>
-        <?php get_template_part('templates/recipe/thumbnail'); ?>
     </div>
 </div>
 
@@ -69,7 +67,6 @@ if (isset($_GET['s']) && !empty($_GET['s'])) {
     </div>
 
     <div class="thumbnails-list">
-        <?php get_template_part('templates/recipe/thumbnail'); ?>
         <?php get_template_part('templates/recipe/thumbnail'); ?>
     </div>
 </div>
@@ -95,22 +92,25 @@ wp_reset_postdata();
 
 <div id="newsletter">
     <?php 
-    get_template_part('templates/recipe/newsletter', null, array('category'=>$category));
+        get_template_part('templates/newsletter/newsletter', null, array('category'=>$category));
     ?>
 </div>
+
 <div id="best_cuisto">
     <div class="section-title">
         <h2>Les meilleurs cuisiniers</h2>
     </div>
-    <div class="cuisiniers-list">
-        <?php
-        if ($userList) {
-            foreach ($userList as $user):
-                get_template_part('templates/recipe/cuisinier', null, array('cuisinier'=>$user->display_name));
-                get_template_part('templates/recipe/cuisinier', null, array('cuisinier'=>$user->display_name));
-            endforeach;
-        }
-        ?>
+
+    <div class="marmishlag-drag-slider">
+        <div class="cuisiniers-list">
+            <?php
+            if ($userList) {
+                foreach ($userList as $user):
+                    get_template_part('templates/cuisinier/cuisinier', null, array('cuisinier'=>$user->display_name));
+                endforeach;
+            }
+            ?>
+        </div>
     </div>
 </div>
 
