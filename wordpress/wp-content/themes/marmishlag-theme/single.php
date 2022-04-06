@@ -22,25 +22,7 @@ get_header();
         <div class="col-4">
             <?php do_action('marmiplug-ingredients'); ?>
 
-            <div class="row marmishlag-list">
-                <h2 class="marmishlag-list__title">Ustensiles</h2>
-                <div class="marmishlag-list__list">
-                    <?php
-                    if (get_post_meta(get_the_ID(), 'marmishlag_recipe_ustensils')[0]) {
-                        foreach (get_post_meta(get_the_ID(), 'marmishlag_recipe_ustensils')[0] as $ingredient):
-                            ?>
-                            <div>
-                                <hr/>
-
-                                <p>
-                                    <strong><?= $ingredient['quantity'] ?></strong> <?= $ingredient['ustensil'] ?>
-                                </p>
-                            </div>
-                        <?php endforeach;
-                    }
-                    ?>
-                </div>
-            </div>
+            <?php do_action('marmiplug-ustensils'); ?>
         </div>
 
         <div class="col-8">
