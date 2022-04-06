@@ -48,7 +48,6 @@ class Roles
             foreach ($capabilities as $capability) {
                 $wpRole->add_cap($capability);
             }
-            var_dump($wpRole);
         }
 
         foreach (ROLE_TO_MODIFY['remove'] as $role => $capabilities) {
