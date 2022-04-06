@@ -19,37 +19,87 @@ get_header();
 <div class="container">
 <?php /* get_search_form() */ ?>
 
-<label>
-    <select name="cat" form="searchForm">
+<div class="filters">
+    <select name="type" form="searchForm">
         <option value="">TYPE DE PLAT</option>
-        <?php
-        if ($categories) {
-            foreach ($categories as $category):?>
-
-            <option value="<?= $category->term_id ?>"> <?= $category->name ?> </option>
-        <?php
-            endforeach;
-        }
-
-        ?>
+            <?php
+                if ($categories) {
+                    foreach ($categories as $category):
+            ?>
+                    <option value="<?= $category->term_id ?>"> <?= $category->name ?> </option>
+            <?php
+                    endforeach;
+                }
+            ?>
     </select>
-</label>
-
-<?php
-if (have_posts()) :
     
-    while ( have_posts()) : the_post();
-?>
-    <h3><?= the_title() ?></h3>
-    <?php
-    endwhile;
+    <select name="difficulty" form="searchForm">
+        <option value="">DIFFICULTÉ</option>
+            <?php
+                if ($categories) {
+                    foreach ($categories as $category):
+            ?>
+                    <option value="<?= $category->term_id ?>"> <?= $category->name ?> </option>
+            <?php
+                    endforeach;
+                }
+            ?>
+    </select>
 
-else :
-?>
-<p>Sorry no posts matched your criteria.</p>
-<?php
-endif;
-?>
+    <select name="time" form="searchForm">
+        <option value="">TEMPS</option>
+            <?php
+                if ($categories) {
+                    foreach ($categories as $category):
+            ?>
+                    <option value="<?= $category->term_id ?>"> <?= $category->name ?> </option>
+            <?php
+                    endforeach;
+                }
+            ?>
+    </select>   
+
+    <select name="diet" form="searchForm">
+        <option value="">RÉGIME</option>
+            <?php
+                if ($categories) {
+                    foreach ($categories as $category):
+            ?>
+                    <option value="<?= $category->term_id ?>"> <?= $category->name ?> </option>
+            <?php
+                    endforeach;
+                }
+            ?>
+    </select>   
+
+    <select name="cost" form="searchForm">
+        <option value="">COÛT</option>
+            <?php
+                if ($categories) {
+                    foreach ($categories as $category):
+            ?>
+                    <option value="<?= $category->term_id ?>"> <?= $category->name ?> </option>
+            <?php
+                    endforeach;
+                }
+            ?>
+    </select>  
+</div>
+
+<div class="search-results">
+    <?php
+    if (have_posts()) :
+        while ( have_posts()) :
+        the_post();
+        get_template_part('templates/recipe/recipe');
+        endwhile;
+    else :
+    ?>
+    <p>Sorry no posts matched your criteria.</p>
+    <?php
+    endif;
+    ?>
+</div>
 
 
 <?php get_footer(); ?>

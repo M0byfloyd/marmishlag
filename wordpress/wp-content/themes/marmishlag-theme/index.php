@@ -30,11 +30,15 @@ if (isset($_GET['s']) && !empty($_GET['s'])) {
 
 
     <div id="categories" class="categories-list">
-        <?php
-        foreach ($categories as $category) {
-            get_template_part('templates/recipe/category', null, array('category' => $category));
-        }
-        ?>
+        <div class="marmishlag-drag-slider">
+            <div class="categories-list">
+                <?php
+                    foreach ($categories as $category) {
+                        get_template_part('templates/category/category', null, array('category' => $category));
+                    }
+                ?>
+            </div>
+        </div>
     </div>
 
     <div id="new_recipes">
@@ -51,25 +55,26 @@ if (isset($_GET['s']) && !empty($_GET['s'])) {
             </a>
         </div>
 
-        <div class="thumbnails-list">
-            <?php
+        <div class="marmishlag-drag-slider">
+            <div class="thumbnails-list">
+                <?php
+                    $args = array(
+                        'post_type' => 'recipe',
+                        'posts_per_page' => 3,
+                    );
 
-            $args = array(
-                'post_type' => 'recipe',
-                'posts_per_page' => 3,
-            );
+                    $my_query = new WP_Query($args);
 
-            $my_query = new WP_Query($args);
+                    if ($my_query->have_posts()) : while ($my_query->have_posts()) : $my_query->the_post();
 
-            if ($my_query->have_posts()) : while ($my_query->have_posts()) : $my_query->the_post();
-
-                get_template_part('templates/recipe/thumbnail');
-            endwhile;
-        endif;
-        wp_reset_postdata();
-        ?>
+                        get_template_part('templates/recipe/thumbnail');
+                    endwhile;
+                    endif;
+                    wp_reset_postdata();
+                ?>
+            </div>
+        </div>
     </div>
-</div>
 
 <div id="newsletter">
     <?php 
