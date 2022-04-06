@@ -1,8 +1,33 @@
 <?php
 
+const ROLE_TO_MODIFY = [
+    'add' => [
+        'administrator' => [
+            'create_recipes',
+            'publish_recipes',
+            'edit_recipe',
+            'edit_recipes',
+            'edit_others_recipes',
+            'read_recipes',
+            'delete_recipes'
+        ],
+        'contributor' => [
+            'create_recipes',
+            'edit_recipe',
+            'edit_recipes',
+            'read_recipes',
+            'delete_recipes'
+        ],
+    ],
+    'remove' => [
+        'contributor' => [
+            'edit_others_posts'
+        ]
+    ]
+];
+
 class Roles
 {
-
     public function __construct()
     {
         $this->register();
@@ -12,34 +37,45 @@ class Roles
     {
         add_action('after_switch_theme', [$this, 'add_role']);
         add_action('after_switch_theme', [$this, 'modify_role']);
-        add_action('switch_theme',[$this, 'remove_role']);
+        add_action('switch_theme', [$this, 'remove_role']);
     }
 
     public function modify_role()
     {
-        $admin = get_role('administrator');
-        $contributor = get_role('contributor');
+        foreach (ROLE_TO_MODIFY['add'] as $role => $capabilities) {
+            $wpRole = get_role($role);
 
-        $admin->add_cap('manage_recipe');
-        $admin->add_cap('manage_recipe_admin');
-        $contributor->add_cap('manage_recipe');
+            foreach ($capabilities as $capability) {
+                $wpRole->add_cap($capability);
+            }
+            var_dump($wpRole);
+        }
 
-        $contributor->remove_cap('edit_others_posts');
+        foreach (ROLE_TO_MODIFY['remove'] as $role => $capabilities) {
+            $wpRole = get_role($role);
+
+            foreach ($capabilities as $capability) {
+                $wpRole->remove_cap($capability);
+            }
+        }
+
     }
 
     public function add_role()
     {
         add_role('marmimodo', 'Marmimodo', [
-            'manage_recipe' => true,
-            'manage_recipe_admin'=> true,
-            'edit'=> true,
-            'edit_posts'=> true,
-            'read'=> true,
-            'moderate_comments' => true
+            'create_recipes' => true,
+            'publish_recipes' => true,
+            'edit_recipe' => true,
+            'edit_recipes' => true,
+            'edit_others_recipes' => true,
+            'read_recipes' => true,
+            'delete_recipes' => true
         ]);
     }
 
-    public function remove_role() {
+    public function remove_role()
+    {
         remove_role('marmimodo');
     }
 

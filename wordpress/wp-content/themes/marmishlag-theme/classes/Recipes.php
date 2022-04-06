@@ -66,12 +66,13 @@ class Recipes
             'capability_type' => 'blog',
             'menu_icon' => 'dashicons-list-view',
             'capabilities' => [
-                'publish_posts' => 'manage_recipe_admin',
-                'edit_post' => 'manage_recipe',
-                'edit_posts' => 'manage_recipe',
-                'edit_others_posts' => 'manage_recipe_admin',
-                'read_posts' => 'manage_recipe',
-                'delete_posts' => 'manage_recipe'
+                'create_posts' => 'create_recipes',
+                'publish_posts' => 'publish_recipes',
+                'edit_post' => 'edit_recipe',
+                'edit_posts' => 'edit_recipes',
+                'edit_others_posts' => 'edit_others_recipes',
+                'read_posts' => 'read_recipes',
+                'delete_posts' => 'delete_recipes'
             ]
         );
 
