@@ -42,17 +42,28 @@ class Difficulty
 
     public function display()
     {
-        $levelDifficulty = isset(get_post_meta(get_the_ID(), 'marmishlag_recipe_difficulty')[0]) && !empty(get_post_meta(get_the_ID(), 'marmishlag_recipe_difficulty')) ? get_post_meta(get_the_ID() , 'marmishlag_recipe_difficulty')[0]: null;
-        if (isset($levelDifficulty) && !empty($levelDifficulty)) {
-            ob_start()
-            ?>
-            <div class="marmiplug-difficulty">
+        ob_start(); ?>
+        <div class="marmiplug-difficulty">
+
+            <?php
+            $levelDifficulty = isset(get_post_meta(get_the_ID(), 'marmishlag_recipe_difficulty')[0]) && !empty(get_post_meta(get_the_ID(), 'marmishlag_recipe_difficulty')) ? get_post_meta(get_the_ID(), 'marmishlag_recipe_difficulty')[0] : null;
+            if (isset($levelDifficulty) && !empty($levelDifficulty)) {
+                ?>
                 <?php for ($i = 1; $i <= 3; $i++) { ?>
                     <img class="marmiplug-difficulty__img"
                          src="<?= $i <= $levelDifficulty ? '/wp-content/plugins/marmiplug/assets/img/svg/difficulty_active.svg' : '/wp-content/plugins/marmiplug/assets/img/svg/difficulty.svg' ?>"
                          alt="">
                 <?php } ?>
-            </div>
-            <?php echo ob_get_clean();}
+                <?php
+            } else { ?>
+                <p>Aucune difficulté n'a été renseignée</p>
+                <?php
+            }
+            ?>
+        </div>
+
+        <?php
+        echo ob_get_clean();
+
     }
 }
