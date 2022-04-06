@@ -23,4 +23,4 @@ jobs:
         run: ssh-keyscan -H ${{ secrets.SSH_HOST }} >> ~/.ssh/known_hosts
         
       - name: Deploy with rsync
-        run: rsync -n ./wordpress/ ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:/var/www/html/
+        run: sudo rsync -n ./wordpress/ ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:/var/www/html/
