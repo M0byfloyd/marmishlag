@@ -22,5 +22,5 @@ jobs:
         SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
         REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
         REMOTE_USER: ${{ secrets.REMOTE_USER }}
-        TARGET: "/home/groupe9/www/"
+        TARGET: "/home/groupe9/public_html"
         EXCLUDE: "/.gitignore, /README.md, /docker-compose.yaml"
