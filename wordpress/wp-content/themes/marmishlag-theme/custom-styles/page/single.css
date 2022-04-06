@@ -10,6 +10,8 @@
       -ms-flex-align: center;
           align-items: center;
   margin-bottom: 35px;
+  -webkit-box-shadow: inset 10px 9px 50px 50px rgba(0, 0, 0, 0.26);
+          box-shadow: inset 10px 9px 50px 50px rgba(0, 0, 0, 0.26);
 }
 
 @media screen and (max-width: 992px) {
