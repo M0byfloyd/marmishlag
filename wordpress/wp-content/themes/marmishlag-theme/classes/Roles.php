@@ -1,23 +1,5 @@
 <?php
 
-
-const ROLE_TO_MODIFY = [
-    'add' => [
-        'administrator' => [
-            'manage_recipe',
-            'manage_recipe_admin'
-        ],
-        'contributor' => [
-            'manage_recipe'
-        ],
-    ],
-    'remove' => [
-        'contributor' => [
-            'edit_others_posts'
-        ]
-    ]
-];
-
 class Roles
 {
 
@@ -35,21 +17,14 @@ class Roles
 
     public function modify_role()
     {
-        foreach (ROLE_TO_MODIFY['add'] as $role => $capabilities) {
-            $wpRole = get_role($role);
+        $admin = get_role('administrator');
+        $contributor = get_role('contributor');
 
-            foreach ($capabilities as $capability) {
-                $wpRole->add_cap($capability);
-            }
-        }
+        $admin->add_cap('manage_recipe');
+        $admin->add_cap('manage_recipe_admin');
+        $contributor->add_cap('manage_recipe');
 
-        foreach (ROLE_TO_MODIFY['remove'] as $role => $capabilities) {
-            $wpRole = get_role($role);
-
-            foreach ($capabilities as $capability) {
-                $wpRole->remove_cap($capability);
-            }
-        }
+        $contributor->remove_cap('edit_others_posts');
     }
 
     public function add_role()
