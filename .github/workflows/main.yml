@@ -14,7 +14,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: fuck
-      run: find * wordpress
+      run: find /* wordpress
     
     - name: Deploy to Staging server
       uses: easingthemes/ssh-deploy@main
