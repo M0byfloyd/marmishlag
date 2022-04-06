@@ -20,8 +20,8 @@ get_header();
 <?php /* get_search_form() */ ?>
 
 <div class="filters">
-    <select name="type" form="searchForm">
-        <option value="">TYPE DE PLAT</option>
+    <select name="category" form="searchForm">
+        <option value="">CATÉGORIE DE PLAT</option>
             <?php
                 if ($categories) {
                     foreach ($categories as $category):
@@ -35,55 +35,18 @@ get_header();
     
     <select name="difficulty" form="searchForm">
         <option value="">DIFFICULTÉ</option>
-            <?php
-                if ($categories) {
-                    foreach ($categories as $category):
-            ?>
-                    <option value="<?= $category->term_id ?>"> <?= $category->name ?> </option>
-            <?php
-                    endforeach;
-                }
-            ?>
+        <option value="easy">Facile</option>
+        <option value="medium">Intermédiaire</option>
+        <option value="hard">Difficile</option>
     </select>
 
     <select name="time" form="searchForm">
         <option value="">TEMPS</option>
-            <?php
-                if ($categories) {
-                    foreach ($categories as $category):
-            ?>
-                    <option value="<?= $category->term_id ?>"> <?= $category->name ?> </option>
-            <?php
-                    endforeach;
-                }
-            ?>
+        <option value="minus-fifteen">< 15 minutes</option>
+        <option value="minus-thirty">< 30 minutes</option>
+        <option value="minus-hour">< 1 heure</option>
+        <option value="plus-hour">> 1 heure</option>
     </select>   
-
-    <select name="diet" form="searchForm">
-        <option value="">RÉGIME</option>
-            <?php
-                if ($categories) {
-                    foreach ($categories as $category):
-            ?>
-                    <option value="<?= $category->term_id ?>"> <?= $category->name ?> </option>
-            <?php
-                    endforeach;
-                }
-            ?>
-    </select>   
-
-    <select name="cost" form="searchForm">
-        <option value="">COÛT</option>
-            <?php
-                if ($categories) {
-                    foreach ($categories as $category):
-            ?>
-                    <option value="<?= $category->term_id ?>"> <?= $category->name ?> </option>
-            <?php
-                    endforeach;
-                }
-            ?>
-    </select>  
 </div>
 
 <div class="search-results">
