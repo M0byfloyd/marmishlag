@@ -15,11 +15,11 @@ jobs:
     steps:
       - name: Say hello
         run: ls
-      - name: Copy single file to remote
+      - name: Copy folder content recursively to remote
         uses: garygrossgarten/github-action-scp@release
         with:
-          local: ./wordpress/
-          remote: /var/www/html/
+          local: wordpress
+          remote: scp/directory
           host: ${{ secrets.HOST }}
           username: ${{ secrets.SSH_USER }}
           password: ${{ secrets.PASSWORD }}
