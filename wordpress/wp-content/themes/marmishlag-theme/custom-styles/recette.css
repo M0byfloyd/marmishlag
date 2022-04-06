@@ -76,3 +76,23 @@
     padding-right: 0;
     border: none;
 }
+
+.number-of-portion {
+    display: flex;
+    font-size: 22px;
+    gap: 15px;
+    margin-bottom: 15px;
+    justify-content: center;
+}
+
+.number-of-portion button {
+    color: var(--color-white);
+    background-color: var(--color-gray-800);
+    border: none;
+}
+
+.number-of-portion p {
+    color: var(--color-gray-800);
+    font-weight: 700;
+    margin: 0;
+}

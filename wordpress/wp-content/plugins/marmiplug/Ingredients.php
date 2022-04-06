@@ -26,31 +26,28 @@ class Ingredients
     public function meta_render()
     { ?>
         <div class="row">
-            <?php for ($i = 0; $i <= $this->maxIngredients; $i++):
+            <?php for ($i = 0; $i <= $this->maxIngredients; $i++) :
                 $quantity = isset(get_post_meta(get_the_ID(), 'marmishlag_recipe_ingredients')[0][$i]['quantity']) && !empty(get_post_meta(get_the_ID(), 'marmishlag_recipe_ingredients')[0][$i]['quantity']) ? get_post_meta(get_the_ID(), 'marmishlag_recipe_ingredients')[0][$i]['quantity'] : '';
                 $unit = isset(get_post_meta(get_the_ID(), 'marmishlag_recipe_ingredients')[0][$i]['unit']) && !empty(get_post_meta(get_the_ID(), 'marmishlag_recipe_ingredients')[0][$i]['unit']) ? get_post_meta(get_the_ID(), 'marmishlag_recipe_ingredients')[0][$i]['unit'] : '';
                 $ingredient = isset(get_post_meta(get_the_ID(), 'marmishlag_recipe_ingredients')[0][$i]['ingredient']) && !empty(get_post_meta(get_the_ID(), 'marmishlag_recipe_ingredients')[0][$i]['ingredient']) ? get_post_meta(get_the_ID(), 'marmishlag_recipe_ingredients')[0][$i]['ingredient'] : '';
-                ?>
+            ?>
                 <div class="col-12">
                     <label>
                         <?= $i + 1 ?>.
-                        <input value="<?= $quantity ?>" name="ingredients_quantity_<?= $i ?>" placeholder="quantité"
-                               type="number">
+                        <input value="<?= $quantity ?>" name="ingredients_quantity_<?= $i ?>" placeholder="quantité" type="number">
                         <select name="ingredients_unit_<?= $i ?>">
                             <option value="">Mesure</option>
-                            <?php foreach ($this->unitOptions as $option): ?>
-                                <option <?= $option === $unit ? 'selected' : '' ?>
-                                        value="<?= $option ?>"><?= $option ?></option>
+                            <?php foreach ($this->unitOptions as $option) : ?>
+                                <option <?= $option === $unit ? 'selected' : '' ?> value="<?= $option ?>"><?= $option ?></option>
                             <?php endforeach; ?> if (get_post_meta(get_the_ID(), 'marmishlag_recipe_ingredients')[0]) {
 
                         </select>
-                        <input value="<?= $ingredient ?>" name="ingredients_ingredient_<?= $i ?>"
-                               placeholder="ingrédient" type="text">
+                        <input value="<?= $ingredient ?>" name="ingredients_ingredient_<?= $i ?>" placeholder="ingrédient" type="text">
                     </label>
                 </div>
             <?php endfor; ?>
         </div>
-        <?php
+    <?php
     }
 
     public function save_metabox($post_id)
@@ -75,35 +72,41 @@ class Ingredients
     public function display()
     {
         ob_start()
-        ?>
+    ?>
         <div class="row marmishlag-list">
 
-        <h2 class="single__title">Ingrédients</h2>
+            <h2 class="single__title">Ingrédients</h2>
 
-        <?php
-        $ingredients = isset(get_post_meta(get_the_ID(), 'marmishlag_recipe_ingredients')[0]) && !empty(get_post_meta(get_the_ID(), 'marmishlag_recipe_ingredients')) ? get_post_meta(get_the_ID(), 'marmishlag_recipe_ingredients')[0] : null;
-        if (isset($ingredients) && !empty($ingredients)) {
-            ?>
-            <div class="single__list">
-                <?php
-                foreach (get_post_meta(get_the_ID(), 'marmishlag_recipe_ingredients')[0] as $ingredient):
-                    ?>
-                    <div>
-                        <hr/>
-
-                        <p>
-                            <strong><?= $ingredient['quantity'] . $ingredient['unit'] ?></strong> <?= $ingredient['ingredient'] ?>
-                        </p>
-                    </div>
-
-                <?php endforeach; ?>
+            <div class="number-of-portion">
+                <button id="remove_portion">-</button>
+                <p class="portions">1</p>
+                <button id="add_portion">+</button>
             </div>
-            </div>
+
             <?php
-        } else {
+            $ingredients = isset(get_post_meta(get_the_ID(), 'marmishlag_recipe_ingredients')[0]) && !empty(get_post_meta(get_the_ID(), 'marmishlag_recipe_ingredients')) ? get_post_meta(get_the_ID(), 'marmishlag_recipe_ingredients')[0] : null;
+            if (isset($ingredients) && !empty($ingredients)) {
             ?>
-            <p>Aucun ingrédient n'a été renseigné pour cette recette</p>
-        <?php }
-        echo ob_get_clean();
+                <div class="single__list">
+                    <?php
+                    foreach (get_post_meta(get_the_ID(), 'marmishlag_recipe_ingredients')[0] as $ingredient) :
+                    ?>
+                        <div>
+                            <hr />
+
+                            <p>
+                                <strong><span class="ingredient-quantity" data-default-value="<?= $ingredient['quantity'] ?>"><?= $ingredient['quantity'] ?></span> <?= $ingredient['unit'] ?></strong> <?= $ingredient['ingredient'] ?>
+                            </p>
+                        </div>
+
+                    <?php endforeach; ?>
+                </div>
+        </div>
+    <?php
+            } else {
+    ?>
+        <p>Aucun ingrédient n'a été renseigné pour cette recette</p>
+<?php }
+            echo ob_get_clean();
+        }
     }
-}
