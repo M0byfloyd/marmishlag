@@ -8,6 +8,7 @@ if (isset($_GET['s']) && !empty($_GET['s'])) {
 ?>
 
 <?php get_header(); ?>
+</div>
 <div class="box box-homepage">
     <div class="container">
         <div class="box-content">
@@ -17,10 +18,8 @@ if (isset($_GET['s']) && !empty($_GET['s'])) {
         </div>
         <form action="<?php esc_url(home_url('/')) ?>">
             <div class="full flex">
-                <label>
                     <input type="search" placeholder="Chercher un aliment, un plat, etc" class="input-text" name="s"
                            value="<?= get_search_query() ?>">
-                </label>
 
                 <button type="submit" class="input-btn">Rechercher</button>
             </div>
@@ -75,9 +74,10 @@ if (isset($_GET['s']) && !empty($_GET['s'])) {
 
     <div id="newsletter">
         <?php
-        get_template_part('templates/recipe/newsletter', null, array('category' => $category));
+        get_template_part('templates/recipe/newsletter');
         ?>
     </div>
+
     <div id="best_cuisto">
         <div class="section-title">
             <h2>Les meilleurs cuisiniers</h2>
@@ -86,12 +86,11 @@ if (isset($_GET['s']) && !empty($_GET['s'])) {
             <?php
             if ($userList) {
                 foreach ($userList as $user):
-                    get_template_part('templates/recipe/cuisinier', null, array('cuisinier' => $user->display_name));
+                    get_template_part('templates/recipe/cooker', null, array('cooker' => $user));
                 endforeach;
             }
             ?>
         </div>
     </div>
-
 
     <?php get_footer(); ?>
