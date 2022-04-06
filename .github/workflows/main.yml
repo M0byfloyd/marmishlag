@@ -16,7 +16,7 @@ jobs:
     - name: Choppe moi le code
       uses: actions/checkout@v1
     
-    - name: Déploie moi ça sagouin
+    - name: Déploie moi ça gros sagouin
       uses: easingthemes/ssh-deploy@main
       env:
         SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
