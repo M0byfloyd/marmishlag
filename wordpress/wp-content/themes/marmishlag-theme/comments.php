@@ -1,7 +1,4 @@
 <?php
-
-
-
 $comments_args = array(
     'label_submit' => 'Envoyer',
     'title_reply' => null,
@@ -29,7 +26,6 @@ $comments_args = array(
     ))
 );
 comment_form( $comments_args );
-
 ?>
 
 
@@ -37,16 +33,13 @@ comment_form( $comments_args );
 <div>
     <?php if ( have_comments() ) : ?>
 
-        <ol>
+        <ul class="single__opinions">
             <?php
-            wp_list_comments( array(
-                'style'       => 'ol',
-                'short_ping'  => true,
-                'avatar_size' => 74,
-            ) );
-            ?>
-        </ol>
+            
+                wp_list_comments( 'type=comment&callback=mytheme_comment' );
 
+            ?>
+        </ul>
     <?php
     else :
         ?>

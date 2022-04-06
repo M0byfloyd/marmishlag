@@ -163,4 +163,36 @@
     margin-right: 0;
   }
 }
+
+.single__opinion {
+  background-color: var(--color-gray-50);
+  margin-bottom: 25px;
+  padding: 21px 22px;
+  border-radius: 6px;
+}
+
+.single__opinions {
+  padding-left: 0;
+  list-style-type: none;
+}
+
+.single__opinion-text {
+  color: var(--color-gray-600);
+}
+
+.single__opinion-author {
+  color: var(--color-gray-400);
+}
+
+.single__opinion-author:hover {
+  text-decoration: underline;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  display: inline-block;
+}
+
+.single__opinion-author a {
+  color: var(--color-gray-400);
+  text-decoration: none;
+}
 /*# sourceMappingURL=single.css.map */

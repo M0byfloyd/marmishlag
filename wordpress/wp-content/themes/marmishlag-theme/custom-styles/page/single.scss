@@ -111,4 +111,30 @@
             }
         }
     }
+    &__opinion{
+        background-color:  var(--color-gray-50);
+        margin-bottom: 25px;
+        padding: 21px 22px;
+        border-radius: 6px;
+        &s{
+            padding-left: 0;
+            list-style-type: none;
+        }
+        &-text{
+            color: var(--color-gray-600);
+        }
+        &-author{
+                color: var(--color-gray-400);
+                &:hover{
+                    text-decoration: underline;
+                    transition: 0.4s;
+                    display: inline-block;
+                }
+
+            a{
+                color: var(--color-gray-400);
+                text-decoration: none;
+            }
+        }
+    }
 }
