@@ -64,24 +64,25 @@ if (isset($_GET['s']) && !empty($_GET['s'])) {
             if ($my_query->have_posts()) : while ($my_query->have_posts()) : $my_query->the_post();
 
                 get_template_part('templates/recipe/thumbnail');
-
             endwhile;
-            endif;
-            wp_reset_postdata();
-            ?>
-        </div>
-    </div>
-
-    <div id="newsletter">
-        <?php
-        get_template_part('templates/recipe/newsletter');
+        endif;
+        wp_reset_postdata();
         ?>
     </div>
+</div>
 
-    <div id="best_cuisto">
-        <div class="section-title">
-            <h2>Les meilleurs cuisiniers</h2>
-        </div>
+<div id="newsletter">
+    <?php 
+        get_template_part('templates/newsletter/newsletter', null, array('category'=>$category));
+    ?>
+</div>
+
+<div id="best_cuisto">
+    <div class="section-title">
+        <h2>Les meilleurs cuisiniers</h2>
+    </div>
+
+    <div class="marmishlag-drag-slider">
         <div class="cuisiniers-list">
             <?php
             if ($userList) {
@@ -92,5 +93,6 @@ if (isset($_GET['s']) && !empty($_GET['s'])) {
             ?>
         </div>
     </div>
+</div>
 
     <?php get_footer(); ?>

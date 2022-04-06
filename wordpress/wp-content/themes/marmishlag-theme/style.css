@@ -177,4 +177,5 @@ Version: 1.0.0
 
 body {
     font-family: 'Outfit';
+    overflow-x: hidden;
 }

@@ -1,14 +1,22 @@
 <?php
 
-
 const ROLE_TO_MODIFY = [
     'add' => [
         'administrator' => [
-            'manage_recipe',
-            'manage_recipe_admin'
+            'create_recipes',
+            'publish_recipes',
+            'edit_recipe',
+            'edit_recipes',
+            'edit_others_recipes',
+            'read_recipes',
+            'delete_recipes'
         ],
         'contributor' => [
-            'manage_recipe'
+            'create_recipes',
+            'edit_recipe',
+            'edit_recipes',
+            'read_recipes',
+            'delete_recipes'
         ],
     ],
     'remove' => [
@@ -20,7 +28,6 @@ const ROLE_TO_MODIFY = [
 
 class Roles
 {
-
     public function __construct()
     {
         $this->register();
@@ -30,7 +37,7 @@ class Roles
     {
         add_action('after_switch_theme', [$this, 'add_role']);
         add_action('after_switch_theme', [$this, 'modify_role']);
-        add_action('switch_theme',[$this, 'remove_role']);
+        add_action('switch_theme', [$this, 'remove_role']);
     }
 
     public function modify_role()
@@ -41,6 +48,7 @@ class Roles
             foreach ($capabilities as $capability) {
                 $wpRole->add_cap($capability);
             }
+            var_dump($wpRole);
         }
 
         foreach (ROLE_TO_MODIFY['remove'] as $role => $capabilities) {
@@ -50,21 +58,24 @@ class Roles
                 $wpRole->remove_cap($capability);
             }
         }
+
     }
 
     public function add_role()
     {
         add_role('marmimodo', 'Marmimodo', [
-            'manage_recipe' => true,
-            'manage_recipe_admin'=> true,
-            'edit'=> true,
-            'edit_posts'=> true,
-            'read'=> true,
-            'moderate_comments' => true
+            'create_recipes' => true,
+            'publish_recipes' => true,
+            'edit_recipe' => true,
+            'edit_recipes' => true,
+            'edit_others_recipes' => true,
+            'read_recipes' => true,
+            'delete_recipes' => true
         ]);
     }
 
-    public function remove_role() {
+    public function remove_role()
+    {
         remove_role('marmimodo');
     }
 

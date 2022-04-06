@@ -40,3 +40,6 @@ $sponso = new Sponsobox('wphetic_sponso');
 require_once __DIR__ . '/classes/Recipes.php';
 $recipes = new Recipes();
 
+require_once __DIR__ . '/classes/Roles.php';
+$recipes = new Roles();
+
