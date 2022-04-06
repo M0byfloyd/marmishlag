@@ -13,3 +13,9 @@ $recipes = new PreparationHelp();
 require_once __DIR__ . '/Difficulty.php';
 $difficulty = new Difficulty();
 
+require_once __DIR__ . '/Ingredients.php';
+$ingredients = new Ingredients();
+
+require_once __DIR__ . '/Duration.php';
+$ingredients = new Duration();
+

@@ -3,7 +3,9 @@
 }
 
 .cuisinier img {
-    height: 180px;
+    max-width: 180px;
+    width: 100%;
+    height: auto;
     border-radius: 50%;
     object-fit: cover;
 }
@@ -18,11 +20,11 @@
     .cuisinier {
         width: 90px;
     }
-    
+
     .cuisinier img {
         height: 90px;
     }
-    
+
     .cuisinier p {
         margin: 10px 0 0 0;
         font-size: 10px;
