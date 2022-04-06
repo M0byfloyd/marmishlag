@@ -15,10 +15,8 @@ jobs:
     steps:
       - name: parent working directory
         run: pwd
-      - name: parent working directory
-        run: |
-          cd home/runner/work/marmishlag/marmishlag/
-          ls
+      - name: LS
+        run:  ls
       - name: Copy folder content recursively to remote
         uses: garygrossgarten/github-action-scp@release
         with:
