@@ -1,0 +1,26 @@
+name: CI
+
+on:
+  push:
+    branches: [ prod ]
+  pull_request:
+    branches: [ prod ]
+
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    name: Deploy prod
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install SSH Key
+        uses: shimataro/ssh-key-action@v2
+        with:
+          key: ${{ secrets.SSH_PRIvATE_KEY }}
+          known_hosts: 'marmi-giga-shlag'
+          
+      - name: Adding Known Hosts
+        run: ssh-keyscan -H ${{ secrets.SSH_HOST }} >> ~/.ssh/known_hosts
+        
+      - name: Deploy with rsync
+        run: rsync -n ./wordpress/ ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:/var/www/html/
