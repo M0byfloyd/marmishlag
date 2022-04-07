@@ -5,6 +5,7 @@ class Auth
 
     public function __construct()
     {
+      add_action( 'wp_login_failed', [$this, 'my_front_end_login_fail'] );  // hook failed login
       $this->register();
     }
 
@@ -86,4 +87,15 @@ class Auth
       }
       return null;
     }
+
+
+    function my_front_end_login_fail( $username ) {
+       $referrer = $_SERVER['HTTP_REFERER'];  // where did the post submission come from?
+
+       if ( !empty($referrer) && !strstr($referrer,'wp-login') && !strstr($referrer,'wp-admin') ) {
+          wp_redirect( $referrer . '?login=failed' );  // let's append some information (login=failed) to the URL for the theme to use
+          exit;
+       }
+    }
+
 }
