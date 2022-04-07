@@ -1,0 +1,26 @@
+name: CI
+
+on:
+  push:
+    branches: [ prod ]
+  pull_request:
+    branches: [ prod ]
+
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    name: Deploy prod
+    runs-on: ubuntu-latest
+    steps:
+    - name: Choppe moi le code
+      uses: actions/checkout@v1
+    
+    - name: Déploie moi ça gros sagouin
+      uses: easingthemes/ssh-deploy@main
+      env:
+        SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+        REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
+        REMOTE_USER: ${{ secrets.REMOTE_USER }}
+        TARGET: "/home/groupe9/public_html"
+        EXCLUDE: "/.gitignore, /README.md, /docker-compose.yaml"
