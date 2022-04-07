@@ -18,6 +18,8 @@ Version: 1.0.0
 @import url('./custom-styles/homepage.css');
 @import url('./custom-styles/newsletter.css');
 @import url('./custom-styles/archive.css');
+@import url('./custom-styles/create-recette.css');
+
 @font-face {
     font-family: 'Outfit';
     src: url('./fonts/Outfit/Outfit-ExtraLight.woff2') format('woff2'), url('./fonts/Outfit/Outfit-ExtraLight.woff') format('woff');

@@ -12,9 +12,8 @@ if (isset($_GET['s']) && !empty($_GET['s'])) {
 <div class="box box-homepage">
     <div class="container">
         <div class="box-content">
-            <h1 class="box-title">Scelerisque praesent fringilla</h1>
-            <p class="box-text">Tempus nisl purus tempor nunc ultricies mauris porta dolor. Risus arcu sapien amet mi
-                dolor, sodales iaculis varius viverra. Posuere eget pulvinar pretium vitae, aliquet faucibus at.</p>
+            <h1 class="box-title"><?= get_option('blogdescription') ?></h1>
+            <p class="box-text"><?= get_option('blogsubdescription') ?></p>
         </div>
         <form action="<?php esc_url(home_url('/')) ?>">
             <div class="full flex">

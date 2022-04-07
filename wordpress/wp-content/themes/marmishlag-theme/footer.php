@@ -6,7 +6,7 @@
                 <h3 class="marmishlag"><?= get_option('blogname') ?></h3>
             </div>
             <div class="col">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+                <p>Appréciez la cuisine de mamie</p>
             </div>
         </div>
         <div class="col-lg-6 col-xs-12 row marmishlag-sections">

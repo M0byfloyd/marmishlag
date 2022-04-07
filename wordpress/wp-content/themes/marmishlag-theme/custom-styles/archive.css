@@ -20,6 +20,12 @@
     justify-content: space-between;
 }
 
+.search-results a * {
+    text-decoration: underline !important;
+    text-decoration-color: white !important;
+    color: var(--color-black);
+}
+
 @media screen and (max-width: 992px) {
     .filters {
         gap: 20px 10px;

@@ -27,7 +27,7 @@ get_header();
 
                 <h2 class="single__title">Préparation</h2>
 
-                <div>
+                <div class="preparation-steps">
                     <?php the_content() ?>
                 </div>
                 <div>

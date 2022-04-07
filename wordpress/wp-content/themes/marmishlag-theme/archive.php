@@ -54,8 +54,13 @@ get_header();
     <?php
     if (have_posts()) :
         while ( have_posts()) :
-        the_post();
-        get_template_part('templates/recipe/recipe');
+        the_post();?>
+        <a href="<?= get_the_permalink() ?>">
+            <?php
+            get_template_part('templates/recipe/recipe');
+            ?>
+        </a>
+        <?php
         endwhile;
     else :
     ?>
