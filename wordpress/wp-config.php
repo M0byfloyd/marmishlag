@@ -14,11 +14,10 @@ if ($_SERVER['SERVER_NAME'] = $developmenturl) {
 }
 
 if (WP_ENVIRONMENT_TYPE === 'production') {
-    define('DB_NAME', 'mysql');
-    define('DB_USER', 'groupe9');
-    define('DB_PASSWORD', 'FLZtpKs&$`5.j');
+    define('DB_NAME', getenv('DB_NAME'));
+    define('DB_USER', getenv('DB_USER'));
+    define('DB_PASSWORD', getenv('DB_PASSWORD'));
     define('DB_HOST','localhost');
-    var_dump(DB_HOST);
 }
 
 if (WP_ENVIRONMENT_TYPE === 'development') {
