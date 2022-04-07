@@ -1,26 +1,15 @@
 <?php
 
-$productionurl = '20.111.32.156';
-$developmenturl = 'http://localhost:2345/';
-
-if ($_SERVER['SERVER_NAME'] == $productionurl) {
-    define('WP_ENVIRONMENT_TYPE', 'production');
-}
-
 // Set the environment type for development
 if ($_SERVER['SERVER_NAME'] = $developmenturl) {
     define('WP_ENVIRONMENT_TYPE', 'development');
     define("WP_DEBUG", true);
 }
 
-if (WP_ENVIRONMENT_TYPE === 'production') {
-    define('DB_NAME', getenv('DB_NAME'));
-    define('DB_USER', getenv('DB_USER'));
-    define('DB_PASSWORD', getenv('DB_PASSWORD'));
+    define('DB_NAME', 'mysql');
+    define('DB_USER', 'groupe9');
+    define('DB_PASSWORD', 'FLZtpKs&$`5.j');
     define('DB_HOST','localhost');
-
-    var_dump(DB_NAME);
-}
 
 if (WP_ENVIRONMENT_TYPE === 'development') {
     if (!function_exists('getenv_docker')) {
