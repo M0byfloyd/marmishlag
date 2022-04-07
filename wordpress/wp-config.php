@@ -14,6 +14,7 @@ if ($_SERVER['SERVER_NAME'] = $developmenturl) {
 }
 
 if (WP_ENVIRONMENT_TYPE === 'production') {
+    die('ntm');
     define('DB_NAME', 'mysql');
     define('DB_USER', 'groupe9');
     define('DB_PASSWORD', 'FLZtpKs&$`5.j');
