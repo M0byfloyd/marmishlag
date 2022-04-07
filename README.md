@@ -8,7 +8,10 @@ docker-compose up -d
 
 Rendez vous sur http://localhost:2345
 
-Commande de génération du dump:
-```shell
-docker exec db mysqldump -umarmishuse -p'marmishpass' marmishmish > marmishmish-database-backup.sql
-```
+admin (admin):
+user: marmimail@gmail.com
+password: rcPqb(SRKyYvY0a3(3
+
+Mr chef (contributor):
+user: cuisto@gmail.com
+password

@@ -66,13 +66,13 @@ class Ustensils
         ?>
         <div class="row marmishlag-list">
 
-        <h2 class="marmishlag-list__title">Ustensiles</h2>
+        <h2 class="single__title">Ustensiles</h2>
 
         <?php
         $ustensils = isset(get_post_meta(get_the_ID(), 'marmishlag_recipe_ustensils')[0]) && !empty(get_post_meta(get_the_ID(), 'marmishlag_recipe_ustensils')) ? get_post_meta(get_the_ID(), 'marmishlag_recipe_ustensils')[0] : null;
         if (isset($ustensils) && !empty($ustensils)) {
             ?>
-            <div class="marmishlag-list__list">
+            <div class="single__list">
                 <?php
                 foreach (get_post_meta(get_the_ID(), 'marmishlag_recipe_ustensils')[0] as $ustensils):
                     ?>
