@@ -26,7 +26,7 @@ services:
             MYSQL_PASSWORD: marmishpass
         volumes:
             # Pour lancer un dump automatiquement au montage du conteneur
-            - ./data.sql:/docker-entrypoint-initdb.d/dump.sql
+            - ./dump/:/docker-entrypoint-initdb.d/
 
 
     phpmyadmin:
@@ -35,4 +35,7 @@ services:
         ports:
             - '8080:80'
         environment:
-            - PMA_ARBITRARY=1
+            PMA_ARBITRARY: 1
+            PMA_HOST: db
+            PMA_USER: marmishuse
+            PMA_PASSWORD: marmishpass

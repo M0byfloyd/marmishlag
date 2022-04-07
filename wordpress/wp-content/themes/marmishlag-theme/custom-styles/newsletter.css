@@ -1,0 +1,64 @@
+.newsletter {
+    border-radius: 4px;
+    position: relative;
+    overflow: hidden;
+}
+
+.newsletter::before {
+    content: "";
+    position: absolute;
+    width: 150%;
+    height: 150%;
+    top: -50%;
+    right: -33%;
+    z-index: -1;
+    background-image: url('https://images.unsplash.com/photo-1606914501449-5a96b6ce24ca?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transform: rotate(-180deg);
+}
+
+.newsletter .newsletter-content {
+    width: 400px;
+    padding-left: 55px;
+    padding-bottom: 60px;
+    padding-top: 60px;
+}
+
+.newsletter p {
+    color: var(--color-white);
+    font-size: 20px;
+}
+
+.newsletter .input-group * {
+    border: none;
+    box-shadow: none;
+    padding: 10px 20px;
+}
+
+.newsletter input::placeholder {
+    color: var(--color-gray-300)
+}
+
+.newsletter .subscribe {
+    background-color: var(--color-main);
+}
+
+@media screen and (max-width: 992px) {
+    .newsletter .input-group * {
+        font-size: 12px;
+        padding: 5px 10px;
+    }
+
+    .newsletter .newsletter-content {
+        width: 85%;
+        padding-left: 15px;
+        padding-bottom: 20px;
+        padding-top: 20px;
+    }
+
+    .newsletter p {
+        font-size: 16px;
+    }
+}

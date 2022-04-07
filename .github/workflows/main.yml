@@ -2,9 +2,12 @@ name: CI
 
 on:
   push:
-    branches: [ prod ]
+    branches:
+      - prod
+
   pull_request:
-    branches: [ prod ]
+    branches:
+      - prod
 
   workflow_dispatch:
 
@@ -15,7 +18,7 @@ jobs:
     steps:
     - name: Choppe moi le code
       uses: actions/checkout@v1
-    
+
     - name: Déploie moi ça gros sagouin
       uses: easingthemes/ssh-deploy@main
       env:

@@ -1,0 +1,54 @@
+.category {
+    background-image: url("https://images.unsplash.com/photo-1600803907087-f56d462fd26b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=627&q=80");
+    width: 215px;
+    height: 215px;
+    background-position: center;
+    color: var(--color-white);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 6px;
+    box-shadow: inset 0px -50px 50px -30px rgba(0,0,0,0.8);
+}
+
+.category .card-body {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding-bottom: 15px;
+    padding-left: 15px;
+    color: white;
+    text-decoration: white;
+}
+
+.category .card-title {
+    font-size: 22px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 0;
+    font-weight: 400;
+}
+
+.category .card-body svg {
+    margin-bottom: 4px;
+}
+
+@media screen and (max-width: 992px) {
+    .category {
+        width: 90px;
+        height: 90px;
+    }
+
+    .category .card-body {
+        padding-bottom: 5px;
+        padding-left: 5px;
+    }
+
+    .category .card-title {
+        font-size: 10px;
+    }
+
+    .category .card-body svg {
+        margin-bottom: -3px;
+    }
+}

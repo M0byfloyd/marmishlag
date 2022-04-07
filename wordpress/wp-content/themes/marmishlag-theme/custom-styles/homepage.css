@@ -1,0 +1,80 @@
+.categories-list {
+    display: flex;
+    gap: 50px;
+}
+
+#categories,
+#best_recipes,
+#new_recipes, 
+#best_cuisto {
+    margin-top: 75px;
+}
+
+#best_cuisto {
+    margin-bottom: 120px;
+}
+
+#newsletter {
+    margin-top: 100px;
+}
+
+.thumbnails-list,
+.thumbnails-list,
+.cuisiniers-list {
+    display: flex;
+    gap: 30px;
+}
+
+.marmishlag-drag-slider {
+    transform: translateX(0px)
+}
+
+.marmishlag-drag-slider > div {
+    width: max-content;
+}
+
+.section-title {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+.section-title h2 {
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--color-gray-800);
+    margin: 0;
+}
+
+.section-title span:first-child {
+    width: max-content;
+}
+
+.section-title a {
+    text-decoration: none;
+    font-size: 16px;
+    color: var(--color-gray-500);
+}
+
+@media screen and (max-width: 992px) {
+    .categories-list {
+        gap: 20px;
+    }
+
+    #best_cuisto {
+        margin-bottom: 40px;
+    }
+
+    .thumbnails-list,
+    .thumbnails-list,
+    .cuisiniers-list {
+        display: flex;
+        gap: 15px;
+    }
+
+    .section-title a {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+}
