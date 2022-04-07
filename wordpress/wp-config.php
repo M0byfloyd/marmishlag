@@ -1,4 +1,5 @@
 <?php
+var_dump($_SERVER['SERVER_NAME']);
 
 $productionurl = 'http://20.111.32.156/';
 $developmenturl = 'http://localhost:2345/';
