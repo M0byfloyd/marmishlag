@@ -1,4 +1,8 @@
 <?php
+
+$productionurl='http://20.111.32.156/';
+$stagingurl='stage.403page.com';
+$developmenturl='dev.403page.com';
 /**
  * The base configuration for WordPress
  *
@@ -24,7 +28,23 @@
 // (it gets parsed by the upstream wizard in https://github.com/WordPress/WordPress/blob/f27cb65e1ef25d11b535695a660e7282b98eb742/wp-admin/setup-config.php#L356-L392)
 
 // a helper function to lookup "env_FILE", "env", then fallback
-if (!function_exists('getenv_docker')) {
+
+// Set the environment type for production
+if ($_SERVER['SERVER_NAME'] == $productionurl) {
+define( 'WP_ENVIRONMENT_TYPE', 'production' ); }
+
+// Set the environment type for staging
+if ($_SERVER['SERVER_NAME'] == $stagingurl) {
+define( 'WP_ENVIRONMENT_TYPE', 'staging' ); }
+
+// Set the environment type for development
+if ($_SERVER['SERVER_NAME'] = $developmenturl) {
+define( 'WP_ENVIRONMENT_TYPE', 'development' ); }
+
+if($WP_ENVIRONMENT_TYPE === 'production' ) {
+	die('BAH NON, LA PROD MARCHE PAS AHAHAHAHAH')
+}
+if (!function_exists('getenv_docker')) {;
 	// https://github.com/docker-library/wordpress/issues/588 (WP-CLI will load this file 2x)
 	function getenv_docker($env, $default) {
 		if ($fileEnv = getenv($env . '_FILE')) {
@@ -108,7 +128,6 @@ $table_prefix = getenv_docker('WORDPRESS_TABLE_PREFIX', 'wp_');
  * @link https://wordpress.org/support/article/debugging-in-wordpress/
  */
 const WP_DEBUG = true;
-const WP_DEBUG_LOG = true;
 
 /* Add any custom values between this line and the "stop editing" line. */
 
