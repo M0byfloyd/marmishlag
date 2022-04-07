@@ -1,5 +1,4 @@
 <?php
-var_dump($_SERVER['SERVER_NAME']);
 
 $productionurl = '20.111.32.156';
 $developmenturl = 'http://localhost:2345/';
@@ -15,7 +14,6 @@ if ($_SERVER['SERVER_NAME'] = $developmenturl) {
 }
 
 if (WP_ENVIRONMENT_TYPE === 'production') {
-    die('ntm');
     define('DB_NAME', 'mysql');
     define('DB_USER', 'groupe9');
     define('DB_PASSWORD', 'FLZtpKs&$`5.j');
