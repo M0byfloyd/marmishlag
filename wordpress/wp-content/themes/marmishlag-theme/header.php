@@ -54,11 +54,9 @@
     <?php if (!is_user_logged_in()): ?>
       <!-- Modal -->
       <?php $dataErrors = $GLOBALS['registerDataErrors']; ?>
-      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal fade connection-modal" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
           <div class="modal-content p-3">
-
-            <legend>Tout le monde aime les modals by JFD</legend>
 
             <ul class="nav nav-tabs" id="myTab" role="tablist">
               <li class="nav-item" role="presentation">
@@ -80,7 +78,7 @@
                     <input type="password" class="form-control" id="inputPassword1" name="pwd">
                   </div>
                   <input type="hidden" name= "redirect_to" value= "<?= home_url() ?>"/>
-                  <button type="submit" class="btn btn-primary">C'est tipar</button>
+                  <button type="submit" class="btn btn-primary">Je me connecte</button>
                 </form>
               </div>
 
@@ -110,7 +108,7 @@
                       <div class="invalid-feedback"><?= $dataErrors->get_error_message('password') ?></div>
                     <?php endif; ?>
                   </div>
-                  <button type="submit" class="btn btn-primary" name="registration-submit" value="true">Je m'inscrirs</button>
+                  <button type="submit" class="btn btn-primary" name="registration-submit" value="true">Je m'inscris</button>
                 </form>
               </div>
             </div>
