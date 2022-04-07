@@ -5,8 +5,19 @@ Description: Super themes pour la cuisine de madame
 Version: 1.0.0
 */
 
-@import url(custom-styles/header.css);
 @import url('./custom-styles/footer.css');
+@import url('./custom-styles/recette.css');
+@import url('./custom-styles/thumbnail.css');
+@import url('./custom-styles/page/index.css');
+@import url('./custom-styles/page/single.css');
+@import url('./custom-styles/components/index.css');
+@import url('./custom-styles/header.css');
+@import url('./custom-styles/search.css');
+@import url('./custom-styles/category.css');
+@import url('./custom-styles/cuisinier.css');
+@import url('./custom-styles/homepage.css');
+@import url('./custom-styles/newsletter.css');
+@import url('./custom-styles/archive.css');
 @font-face {
     font-family: 'Outfit';
     src: url('./fonts/Outfit/Outfit-ExtraLight.woff2') format('woff2'), url('./fonts/Outfit/Outfit-ExtraLight.woff') format('woff');
@@ -89,8 +100,7 @@ Version: 1.0.0
 
 @font-face {
     font-family: 'DM Sans';
-    src: url('DMSans-Bold.woff2') format('woff2'),
-        url('DMSans-Bold.woff') format('woff');
+    src: url('./fonts/DMSans/DMSans-Bold.woff2') format('woff2'), url('./fonts/DMSans/DMSans-Bold.woff') format('woff');
     font-weight: bold;
     font-style: normal;
     font-display: swap;
@@ -98,8 +108,7 @@ Version: 1.0.0
 
 @font-face {
     font-family: 'DM Sans';
-    src: url('DMSans-Regular.woff2') format('woff2'),
-        url('DMSans-Regular.woff') format('woff');
+    src: url('./fonts/DMSans/DMSans-Regular.woff2') format('woff2'), url('./fonts/DMSans/DMSans-Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -107,8 +116,7 @@ Version: 1.0.0
 
 @font-face {
     font-family: 'DM Sans';
-    src: url('DMSans-Medium.woff2') format('woff2'),
-        url('DMSans-Medium.woff') format('woff');
+    src: url('./fonts/DMSans/DMSans-Medium.woff2') format('woff2'), url('./fonts/DMSans/DMSans-Medium.woff') format('woff');
     font-weight: 500;
     font-style: normal;
     font-display: swap;
@@ -116,8 +124,7 @@ Version: 1.0.0
 
 @font-face {
     font-family: 'DM Sans';
-    src: url('DMSans-Italic.woff2') format('woff2'),
-        url('DMSans-Italic.woff') format('woff');
+    src: url('./fonts/DMSans/DMSans-Italic.woff2') format('woff2'), url('./fonts/DMSans/DMSans-Italic.woff') format('woff');
     font-weight: normal;
     font-style: italic;
     font-display: swap;
@@ -125,8 +132,7 @@ Version: 1.0.0
 
 @font-face {
     font-family: 'DM Sans';
-    src: url('DMSans-BoldItalic.woff2') format('woff2'),
-        url('DMSans-BoldItalic.woff') format('woff');
+    src: url('./fonts/DMSans/DMSans-BoldItalic.woff2') format('woff2'), url('./fonts/DMSans/DMSans-BoldItalic.woff') format('woff');
     font-weight: bold;
     font-style: italic;
     font-display: swap;
@@ -134,8 +140,7 @@ Version: 1.0.0
 
 @font-face {
     font-family: 'DM Sans';
-    src: url('DMSans-MediumItalic.woff2') format('woff2'),
-        url('DMSans-MediumItalic.woff') format('woff');
+    src: url('./fonts/DMSans/DMSans-MediumItalic.woff2') format('woff2'), url('./fonts/DMSans/DMSans-MediumItalic.woff') format('woff');
     font-weight: 500;
     font-style: italic;
     font-display: swap;
@@ -158,6 +163,15 @@ Version: 1.0.0
     --color-gray-900: #121826;
 }
 
+.full {
+    width: 100% !important;
+}
+
+.flex {
+    display: flex;
+}
+
 body {
     font-family: 'Outfit';
+    overflow-x: hidden;
 }

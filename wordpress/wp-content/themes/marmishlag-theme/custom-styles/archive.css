@@ -1,0 +1,45 @@
+.filters {
+    gap: 30px;
+    display: flex;
+    margin-top: 60px;
+}
+
+.filters select {
+    border: none;
+    outline: none;
+    padding-right: 15px;
+    font-size: 14px;
+}
+
+.search-results {
+    margin-top: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-bottom: 80px;
+    justify-content: space-between;
+}
+
+@media screen and (max-width: 992px) {
+    .filters {
+        gap: 20px 10px;
+        margin-top: 40px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .search-results .recette {
+        margin: auto;
+    }
+
+    .filters select {
+        padding-right: 10px;
+        font-size: 10px;
+    }
+
+    .search-results {
+        margin-top: 40px;
+        gap: 20px;
+        margin-bottom: 40px;
+    }
+}

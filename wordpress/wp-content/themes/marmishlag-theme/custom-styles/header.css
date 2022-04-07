@@ -1,162 +1,187 @@
 .navbar-container {
-    padding: 0 5%;
-    background-color: var(--color-white);
+  padding: 0 5%;
+  background-color: var(--color-white);
 }
 
 .navbar-box {
-    background-color: var(--color-white);
-    height: 105px;
+  background-color: var(--color-white);
+  height: 105px;
 }
 
 .navbar-title {
-    font-family: Staatliches;
-    color: var(--color-black);
-    font-size: 38px;
+  font-family: Staatliches;
+  color: var(--color-black);
+  font-size: 38px;
 }
 
 .navbar-title:hover {
-    color: var(--color-black);
+  color: var(--color-black);
 }
 
 .navbar-burger {
-    box-shadow: none !important;
+  box-shadow: none !important;
 }
 
 .navbar-burger-icons {
-    background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280, 0, 0, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+  background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280, 0, 0, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 
 .navbar-connexion {
-    background-color: var(--color-black);
-    color: var(--color-white);
-    text-decoration: none;
-    height: 42px;
-    border-radius: 4px;
-    padding: 12px 18px;
-    display: flex;
-    align-items: center;
-    border: solid 2px var(--color-black);
-    transition: 0.4s;
-    font-size: 14px;
-    font-family: Outfit;
-    font-weight: 400;
+  background-color: var(--color-gray-900);
+  color: var(--color-white);
+  text-decoration: none;
+  height: 42px;
+  border-radius: 4px;
+  padding: 12px 18px;
+  display: flex;
+  align-items: center;
+  border: solid 2px var(--color-gray-900);
+  transition: 0.4s;
+  font-size: 14px;
+  font-family: Outfit;
+  font-weight: 400;
 }
 
 .navbar-collapse {
-    flex-grow: inherit !important;
+  flex-grow: inherit !important;
 }
 
 .navbar-connexion:hover {
-    background-color: var(--color-white);
-    color: var(--color-black);
+  background-color: var(--color-white);
+  color: var(--color-gray-900);
 }
 
 .navbar-connexion-user {
-    width: 30px;
-    padding-right: 10px;
-    fill: var(--color-white);
+  width: 30px;
+  padding-right: 10px;
+  fill: var(--color-white);
 }
 
 .navbar-connexion:hover .navbar-connexion-user {
-    fill: var(--color-black);
+  fill: var(--color-black);
 }
-
 
 /* Search input */
 
 .search-box {
-    position: relative;
-    display: inline-block;
-    margin: 4px 2px;
-    height: 50px;
-    width: 50px;
+  position: relative;
+  display: inline-block;
+  margin: 4px 2px;
+  height: 50px;
+  width: 50px;
 }
 
 .search-button {
-    background-color: transparent;
-    display: inline-block;
-    margin: 4px 2px;
-    font-size: 14px;
-    padding-left: 32px;
-    padding-right: 32px;
-    height: 50px;
-    line-height: 50px;
-    text-align: center;
-    color: white;
-    text-decoration: none;
-    cursor: pointer;
-    user-select: none;
+  background-color: transparent;
+  display: inline-block;
+  margin: 4px 2px;
+  font-size: 14px;
+  padding-left: 32px;
+  padding-right: 32px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+  user-select: none;
 }
 
 .search-logo {
-    display: inline-block;
-    pointer-events: none;
-    transform: rotate(-45deg);
+  display: inline-block;
+  pointer-events: none;
+  transform: rotate(-45deg);
 }
 
 .search-label {
-    position: absolute;
-    font-size: 38px;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    color: var(--color-black);
-    display: flex;
+  position: absolute;
+  font-size: 38px;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  color: var(--color-black);
+  display: flex;
 }
 
 .search-label-text {
-    font-size: 18px;
-    font-family: Outfit;
-    font-weight: 400;
-    margin-left: 15px;
+  font-size: 18px;
+  font-family: Outfit;
+  font-weight: 400;
+  margin-left: 15px;
 }
 
-.search-input:focus+.search-label {
-    transition: 0.4s;
-    background-color: var(--color-white);
+.search-input:focus + .search-label {
+  transition: 0.4s;
+  background-color: var(--color-white);
 }
 
 .navbar-connexion {
-    margin-left: 200px;
+  margin-left: 200px;
 }
 
 .search-input {
-    position: absolute;
-    left: 36px;
-    background-color: var(--color-white);
-    border: none;
-    padding: 0 0 0 3px;
-    width: 185px;
-    height: 100%;
-    z-index: 10;
-    transition: 0.4s;
+  position: absolute;
+  left: 36px;
+  background-color: var(--color-white);
+  border: none;
+  padding: 0 0 0 3px;
+  width: 185px;
+  height: 100%;
+  z-index: 10;
+  transition: 0.4s;
 }
 
 .search-input:focus {
-    transition: width 0.4s;
-    padding: 0 16px 0 3px;
-    outline: none;
+  transition: width 0.4s;
+  padding: 0 16px 0 3px;
+  outline: none;
 }
 
+/* MODAL CONNECTION */
+.connection-modal button[type="submit"] {
+  display: block;
+  margin: auto;
+  background-color: var(--color-black);
+  box-shadow: none !important;
+  border: none !important;
+}
+
+.connection-modal input {
+  background-color: white !important;
+  outline: none !important;
+  box-shadow: none !important;
+  border: 1px solid #ced4da !important;
+}
+
+.connection-modal [name=user_registration] {
+    margin-top: 10px;
+}
+
+.connection-modal .nav-tabs .nav-link:not(.active) {
+  color: var(--color-gray-300);
+}
 
 /* MEDIA queries */
 
 @media screen and (max-width: 992px) {
-    .navbar-box {
-        height: 80px;
-    }
-    .navbar-collapse {
-        padding-bottom: 20px;
-        display: flex;
-    }
-    .search-box {
-        width: 50%;
-    }
-    .navbar-connexion {
-        width: 50%;
-        margin: 0;
-    }
-    .search-input {
-        width: 80%;
-    }
+  .navbar-box {
+    height: 80px;
+  }
+  .navbar-collapse {
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .search-box {
+    width: 50%;
+  }
+  .navbar-connexion {
+    width: 50%;
+    margin: 0;
+    margin-left: 8px;
+    max-width: 150px;
+  }
+  .search-input {
+    width: 80%;
+  }
 }

@@ -1,0 +1,88 @@
+.box {
+  padding: 110px 0;
+}
+.box-homepage {
+  background: url(".././images/unsplash_KPDbRyFOTnE.png") no-repeat;
+  background-size: cover;
+}
+.box-recette {
+  background: url(".././images/unsplash_0geTqSZ76Xg.png") no-repeat;
+  background-size: cover;
+}
+.box-title {
+  font-family: Outfit;
+  font-size: 80px;
+  font-weight: 600;
+  line-height: 90px;
+  text-align: left;
+  color: var(--color-white) !important;
+  margin-bottom: 44px;
+}
+.box-text {
+  font-family: Outfit;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 34px;
+  text-align: left;
+  color: var(--color-white);
+  margin-bottom: 80px;
+}
+.box-content {
+  width: 50%;
+}
+
+.input-text {
+  height: 65px;
+  border-radius: 4px 0 0 4px;
+  width: 80%;
+  border: var(--color-white);
+  padding: 0 40px;
+}
+.input-text:focus {
+  outline: none;
+  transition: 0.4s;
+}
+.input-btn {
+  width: 20% !important;
+  padding: 0;
+  box-shadow: none;
+  background-color: var(--color-gray-900);
+  color: var(--color-white);
+  text-decoration: none;
+  border-radius: 0 4px 4px 0;
+  padding: 12px 18px;
+  display: flex;
+  align-items: center;
+  border: solid 2px var(--color-gray-900);
+  transition: 0.4s;
+  font-family: Outfit;
+  font-weight: 400;
+  justify-content: center;
+  font-size: 22px;
+}
+.input-btn:hover {
+  background-color: var(--color-white);
+  color: var(--color-gray-900);
+}
+@media screen and (max-width: 992px) {
+  .box-content {
+    width: 100%;
+  }
+  .box-title {
+    font-size: 40px;
+    line-height: 50px;
+  }
+  .box-text {
+    font-size: 16px;
+    line-height: 20px;
+  }
+  .input-text {
+    width: 70%;
+    padding: 0 10px;
+    font-size: 12px;
+  }
+  .input-btn {
+    font-size: 14px;
+    width: 30% !important;
+  }
+}

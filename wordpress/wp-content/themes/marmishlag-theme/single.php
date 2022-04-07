@@ -3,29 +3,42 @@
 $comments = get_comments();
 get_header();
 ?>
-
-<?php if (have_posts()) : ?>
-    <?php while (have_posts()) : ?>
-        <?php the_post(); ?>
-
-        <div>
-            <img src="<?php the_post_thumbnail_url(); ?>" alt="...">
-            <div>
-                <h5><?php the_title(); ?></h5>
-                <p><?php the_content(); ?></p>
-                <p><small><?php the_date(); ?></small></p>
+<?php the_post(); ?>
+<div class="single">
+    <div class="row single__header" style="background-image: url('<?= get_the_post_thumbnail_url() ?>')">
+        <h1 class="single__header__title"><?= the_title() ?></h1>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="flex single__infos">
+                <?php do_action('marmiplug-duration'); ?>
+                <?php do_action('marmiplug-difficulty'); ?>
             </div>
         </div>
 
-    <div>
-        <h2>Avis de la communauté</h2>
-        <?php
-        comments_template();
+        <div class="row">
+            <div class="col-xs-12 col-md-4">
+                <?php do_action('marmiplug-ingredients'); ?>
 
-        ?>
+                <?php do_action('marmiplug-ustensils'); ?>
+            </div>
+
+            <div class="col-xs-12 col-md-8">
+
+                <h2 class="single__title">Préparation</h2>
+
+                <div>
+                    <?php the_content() ?>
+                </div>
+                <div>
+                    <h2 class="single__title">Avis de la communauté</h2>
+                    <?php comments_template(); ?>
+                </div>
+            </div>
+        </div>
     </div>
 
-    <?php endwhile; ?>
-<?php endif; ?>
+</div>
+
 
 <?php get_footer(); ?>
