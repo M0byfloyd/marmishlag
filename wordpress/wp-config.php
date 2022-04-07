@@ -1,10 +1,10 @@
 <?php
 
-$developmenturl = 'http://localhost:2345/';
+$developmentUrl = 'http://localhost:2345/';
 
 
 // Set the environment type for development
-if ($_SERVER['SERVER_NAME'] = $developmenturl) {
+if ($_SERVER['SERVER_NAME'] = $developmentUrl) {
     define('WP_ENVIRONMENT_TYPE', 'development');
     define("WP_DEBUG", true);
 }
