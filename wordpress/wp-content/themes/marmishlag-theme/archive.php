@@ -7,7 +7,7 @@ get_header();
 <div class="box box-recette">
     <div class="container">
         <div class="box-content full">
-            <h1 class="box-title">Résultats (lorem)</h1>
+            <h1 class="box-title">Résultats (<?= count($wp_query->posts) ?>)</h1>
         </div>
         <form action="<?php esc_url(home_url('/')) ?>">
             <div class="full flex">
@@ -33,7 +33,7 @@ get_header();
                 }
             ?>
     </select>
-    
+
     <select name="difficulty" form="searchForm">
         <option value="">DIFFICULTÉ</option>
         <option value="easy">Facile</option>
@@ -47,7 +47,7 @@ get_header();
         <option value="minus-thirty">< 30 minutes</option>
         <option value="minus-hour">< 1 heure</option>
         <option value="plus-hour">> 1 heure</option>
-    </select>   
+    </select>
 </div>
 
 <div class="search-results">
