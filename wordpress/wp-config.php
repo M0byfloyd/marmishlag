@@ -18,6 +18,8 @@ if (WP_ENVIRONMENT_TYPE === 'production') {
     define('DB_USER', getenv('DB_USER'));
     define('DB_PASSWORD', getenv('DB_PASSWORD'));
     define('DB_HOST','localhost');
+
+    var_dump(DB_NAME);
 }
 
 if (WP_ENVIRONMENT_TYPE === 'development') {
