@@ -18,6 +18,7 @@ if (WP_ENVIRONMENT_TYPE === 'production') {
     define('DB_USER', 'groupe9');
     define('DB_PASSWORD', 'FLZtpKs&$`5.j');
     define('DB_HOST','localhost');
+    var_dump(DB_HOST);
 }
 
 if (WP_ENVIRONMENT_TYPE === 'development') {
