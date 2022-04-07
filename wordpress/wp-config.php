@@ -1,7 +1,7 @@
 <?php
 var_dump($_SERVER['SERVER_NAME']);
 
-$productionurl = 'http://20.111.32.156/';
+$productionurl = '20.111.32.156';
 $developmenturl = 'http://localhost:2345/';
 
 if ($_SERVER['SERVER_NAME'] == $productionurl) {
