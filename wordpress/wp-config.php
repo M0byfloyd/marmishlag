@@ -1,5 +1,8 @@
 <?php
 
+$developmenturl = 'http://localhost:2345/';
+
+
 // Set the environment type for development
 if ($_SERVER['SERVER_NAME'] = $developmenturl) {
     define('WP_ENVIRONMENT_TYPE', 'development');
