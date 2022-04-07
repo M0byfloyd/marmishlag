@@ -78,9 +78,13 @@ class Ingredients
             <h2 class="single__title">Ingrédients</h2>
 
             <div class="number-of-portion">
-                <button id="remove_portion">-</button>
-                <p class="portions">1</p>
-                <button id="add_portion">+</button>
+                <p>Nombre de personnes</p>
+                <div class="flex">
+
+                    <button id="remove_portion">-</button>
+                    <p class="portions">1</p>
+                    <button id="add_portion">+</button>
+                </div>
             </div>
 
             <?php
