@@ -9,7 +9,7 @@ if ($_SERVER['SERVER_NAME'] = $developmenturl) {
     define("WP_DEBUG", true);
 }
 
-    define('DB_NAME', 'mysql');
+    define('DB_NAME', 'wordpress');
     define('DB_USER', 'groupe9');
     define('DB_PASSWORD', 'FLZtpKs&$`5.j');
     define('DB_HOST','localhost');
