@@ -17,7 +17,7 @@ if (WP_ENVIRONMENT_TYPE === 'production') {
     define('DB_NAME', 'mysql');
     define('DB_USER', 'groupe9');
     define('DB_PASSWORD', 'FLZtpKs&$`5.j');
-    define('DB_HOST','127.0.0.0');
+    define('DB_HOST','localhost');
 }
 
 if (WP_ENVIRONMENT_TYPE === 'development') {
