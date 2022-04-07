@@ -13,6 +13,7 @@ if ($_SERVER['SERVER_NAME'] = $developmenturl) {
     define('DB_USER', 'groupe9');
     define('DB_PASSWORD', 'FLZtpKs&$`5.j');
     define('DB_HOST','localhost');
+    define('WP_SITEURL', '20.111.32.156');
 
 if (WP_ENVIRONMENT_TYPE === 'development') {
     if (!function_exists('getenv_docker')) {
