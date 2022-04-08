@@ -2,12 +2,10 @@ name: CD Prod
 
 on:
   push:
-    branches:
-      - prod
+    branches: [ prod ]
 
   pull_request:
-    branches:
-      - prod
+    branches: [ prod ]
 
   workflow_dispatch:
 
