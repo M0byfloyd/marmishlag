@@ -1,0 +1,44 @@
+name: CD Develop
+
+on:
+  push:
+    branches:
+      - develop
+
+  pull_request:
+    branches:
+      - develop
+
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    name: Deploy develop
+    environment: develop
+
+    runs-on: ubuntu-latest
+    steps:
+    - name: Choppe moi le code
+      uses: actions/checkout@v1
+
+    - name: Déploie moi ça gros sagouin
+      uses: easingthemes/ssh-deploy@main
+      env:
+        SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+        REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
+        REMOTE_USER: ${{ secrets.REMOTE_USER }}
+        TARGET: "/home/groupe9/public_html"
+        EXCLUDE: "/.gitignore, /README.md"
+
+    - name: Recree moi le docker vite
+      uses: appleboy/ssh-action@master
+      with:
+        host: ${{ secrets.REMOTE_HOST }}
+        username: ${{ secrets.REMOTE_USER }}
+        key: ${{ secrets.SSH_PRIVATE_KEY }}
+        script: |
+          cd ${{ env.TARGET }}
+          docker-compose stop
+          docker-compose rm
+          docker-compose up -d
+          docker ps
