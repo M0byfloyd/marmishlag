@@ -15,3 +15,5 @@ password: rcPqb(SRKyYvY0a3(3
 Mr chef (contributor):
 user: cuisto@gmail.com
 password: azertyuiop
+
+http://mamiswag-dev.duckdns.org/
