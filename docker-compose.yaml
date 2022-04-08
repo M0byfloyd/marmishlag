@@ -10,7 +10,7 @@ services:
             WORDPRESS_DB_USER: marmishuse
             WORDPRESS_DB_PASSWORD: marmishpass
         ports:
-            - '2345:80'
+            - '80:80'
         volumes:
             - ./wordpress:/var/www/html
         depends_on:

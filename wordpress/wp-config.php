@@ -1,6 +1,6 @@
 <?php
 
-$developmentUrl = 'http://localhost:2345/';
+$developmentUrl = 'http://141.94.85.201/';
 
 
 // Set the environment type for development

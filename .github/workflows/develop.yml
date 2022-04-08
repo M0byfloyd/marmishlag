@@ -40,3 +40,4 @@ jobs:
           docker-compose rm
           docker-compose up -d
           docker ps
+          
