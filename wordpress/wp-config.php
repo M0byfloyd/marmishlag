@@ -11,7 +11,7 @@ if ($_SERVER['SERVER_NAME'] = $developmentUrl) {
 
     define('DB_NAME', 'wordpress');
     define('DB_USER', 'groupe9');
-    define('DB_PASSWORD', 'FLZtpKs&$`5.j');
+    define('DB_PASSWORD', 'kevinestbeau');
     define('DB_HOST','localhost');
 
 if (WP_ENVIRONMENT_TYPE === 'development') {
