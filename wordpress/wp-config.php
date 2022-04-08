@@ -9,11 +9,6 @@ if ($_SERVER['SERVER_NAME'] = $developmentUrl) {
     define("WP_DEBUG", true);
 }
 
-    define('DB_NAME', 'wordpress');
-    define('DB_USER', 'groupe9');
-    define('DB_PASSWORD', 'kevinestbeau');
-    define('DB_HOST','localhost');
-
 if (WP_ENVIRONMENT_TYPE === 'development') {
     if (!function_exists('getenv_docker')) {
         ;
@@ -34,6 +29,12 @@ if (WP_ENVIRONMENT_TYPE === 'development') {
     define('DB_USER', getenv_docker('WORDPRESS_DB_USER', 'example username'));
     define('DB_PASSWORD', getenv_docker('WORDPRESS_DB_PASSWORD', 'example password'));
     define('DB_HOST', getenv_docker('WORDPRESS_DB_HOST', 'mysql'));
+}
+else {
+      define('DB_NAME', 'wordpress');
+      define('DB_USER', 'groupe9');
+      define('DB_PASSWORD', 'kevinestbeau');
+      define('DB_HOST','localhost');
 }
 
 const DB_CHARSET = 'utf8';
